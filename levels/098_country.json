@@ -251,13 +251,8 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
         "terrain": "grass",
@@ -379,13 +374,8 @@
         ]
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "forest",
+        "objects": []
       },
       {
         "terrain": "unknown",
@@ -516,13 +506,8 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
         "terrain": "grass",
@@ -533,13 +518,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "sand",
+        "objects": []
       },
       {
         "terrain": "pit",
@@ -620,13 +600,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "sand",
+        "objects": []
       },
       {
         "terrain": "pit",
@@ -900,13 +875,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "sand",
+        "objects": []
       },
       {
         "terrain": "sand",
@@ -970,13 +940,8 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
         "terrain": "grass",

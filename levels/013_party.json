@@ -6,13 +6,8 @@
   "grid": [
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "sand",
+        "objects": []
       },
       {
         "terrain": "sand",
@@ -259,13 +254,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "sand",
+        "objects": []
       },
       {
         "terrain": "grass",
@@ -394,13 +384,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "sand",
+        "objects": []
       },
       {
         "terrain": "sand",
@@ -531,13 +516,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "sand",
+        "objects": []
       },
       {
         "terrain": "grass",
@@ -808,15 +788,6 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
-      },
-      {
         "terrain": "sand",
         "objects": []
       },
@@ -853,13 +824,12 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
       },
       {
         "terrain": "water",

@@ -31,13 +31,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "sand",
+        "objects": []
       },
       {
         "terrain": "water",
@@ -515,13 +510,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "forest",
+        "objects": []
       },
       {
         "terrain": "water",
@@ -733,13 +723,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "sand",
+        "objects": []
       },
       {
         "terrain": "sand",

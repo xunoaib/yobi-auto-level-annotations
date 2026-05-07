@@ -347,13 +347,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "forest",
+        "objects": []
       },
       {
         "terrain": "grass",
@@ -670,13 +665,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "sand",
+        "objects": []
       },
       {
         "terrain": "sand",

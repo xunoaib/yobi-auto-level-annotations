@@ -18,7 +18,7 @@ from PIL import Image
 
 from classify_terrain import classify_level, _build_lookup as build_terrain_lookup
 from detect_letters import detect_letters, DEFAULT_REFS
-from detect_sprites import detect_sprite
+from detect_sprites import detect_sprite, _player as player_score
 
 ROWS = 12
 COLS = 15
@@ -68,6 +68,43 @@ def parse_level(tile_dir: Path, terrain_lookup: dict, letter_refs: dict) -> dict
 
             grid_row.append({"terrain": terrain, "objects": objects})
         grid.append(grid_row)
+
+    # --- Player deduplication -------------------------------------------------
+    # The player appears exactly once per level, always on a water tile.
+    # 1. Collect every tile where "player" was detected.
+    # 2. Among those on water, keep the highest-scoring one.
+    # 3. Strip "player" from every other tile (water or not).
+    all_player_rc = [
+        (r, c)
+        for r, row in enumerate(grid)
+        for c, tile in enumerate(row)
+        if any(obj.get("value") == "player" for obj in tile["objects"])
+    ]
+    def _ps(r: int, c: int) -> float:
+        arr = np.array(Image.open(tile_dir / f"r{r:02d}_c{c:02d}.png").convert("RGB"))
+        return player_score(arr)
+
+    water_candidates = [
+        (_ps(r, c), r, c)
+        for r, c in all_player_rc
+        if terrain_map.get(f"r{r:02d}_c{c:02d}", "") == "water"
+    ]
+    # Best candidate: highest-scoring water tile, or highest overall if none on water
+    if water_candidates:
+        _, best_r, best_c = max(water_candidates)
+    elif all_player_rc:
+        _, best_r, best_c = max((_ps(r, c), r, c) for r, c in all_player_rc)
+    else:
+        best_r, best_c = None, None
+
+    for r, c in all_player_rc:
+        if (r, c) != (best_r, best_c):
+            grid[r][c]["objects"] = [
+                o for o in grid[r][c]["objects"] if o.get("value") != "player"
+            ]
+            if not grid[r][c]["objects"]:
+                grid[r][c]["terrain"] = terrain_map.get(f"r{r:02d}_c{c:02d}", "unknown")
+    # --------------------------------------------------------------------------
 
     return {
         "level": tile_dir.name,

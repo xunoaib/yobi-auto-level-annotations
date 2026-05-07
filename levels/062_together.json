@@ -762,13 +762,8 @@
         ]
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "mud",
+        "objects": []
       },
       {
         "terrain": "mud",
