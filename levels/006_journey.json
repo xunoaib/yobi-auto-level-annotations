@@ -1,0 +1,797 @@
+{
+  "level": "006_journey",
+  "word": "JOURNEY",
+  "rows": 12,
+  "cols": 15,
+  "grid": [
+    [
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "letter",
+            "value": "R"
+          }
+        ]
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "letter",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "letter",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "rock",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "grass",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "letter",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": [
+          {
+            "type": "item",
+            "value": "tomato"
+          }
+        ]
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "letter",
+            "value": "U"
+          }
+        ]
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "letter",
+            "value": "Y"
+          }
+        ]
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "rock",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "letter",
+            "value": "O"
+          }
+        ]
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "letter",
+            "value": "J"
+          }
+        ]
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      }
+    ]
+  ]
+}
