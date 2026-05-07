@@ -29,16 +29,30 @@ def _dominant_colour(arr: np.ndarray) -> str:
     r = arr[:, :, 0].astype(float)
     g = arr[:, :, 1].astype(float)
     b = arr[:, :, 2].astype(float)
+    total = arr.shape[0] * arr.shape[1]
 
+    # Forest and rock are solid objects whose pixels take priority over any
+    # underlying terrain that bleeds through their sprite edges.
+    # Grass is always one solid bright green; forest is always a darker green.
+    # A tile is forest if >10% of its pixels are dark green (g in 50-170,
+    # r and b both low), even if sand/grass bleeds through the rest.
+    dark_green = int(((g > 50) & (g < 175) & (r < 60) & (b < 60)).sum())
+    if dark_green / total > 0.10:
+        return "forest"
+
+    # Rock: >15% near-neutral gray pixels.
+    rock_gray = int(((np.abs(r - g) < 25) & (np.abs(g - b) < 25)
+                     & (r > 80) & (r < 220)).sum())
+    if rock_gray / total > 0.15:
+        return "rock"
+
+    # For everything else use a simple pixel vote.
     votes = {
         "water":  int(((b > 150) & (b > r * 1.5) & (b > g * 1.2)).sum()),
-        "forest": int(((g > 80)  & (g > r * 1.4) & (g > b * 1.4) & (r < 100)).sum()),
-        "grass":  int(((g > 200) & (g > r * 1.5) & (g > b * 1.5)).sum()),
+        "grass":  int(((g > 175) & (r < 60)  & (b < 60)).sum()),
         "sand":   int(((r > 200) & (g > 200) & (b > 100) & (b < 210)
                        & (np.abs(r - g) < 40)).sum()),
-        "rock":   int(((np.abs(r - g) < 25) & (np.abs(g - b) < 25)
-                       & (r > 80) & (r < 200)).sum()),
-        "mud":    int(((r > 80) & (r < 180) & (g < 80) & (b < 60)
+        "mud":    int(((r > 80)  & (r < 180) & (g < 80) & (b < 60)
                        & (r > g * 1.5)).sum()),
         "embers": int(((r > 180) & (g > 100) & (g < 200) & (b < 80)).sum()),
     }
