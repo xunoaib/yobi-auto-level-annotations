@@ -35,9 +35,12 @@ def _cloud_demon(arr: np.ndarray) -> float:
 
 
 def _hippo(arr: np.ndarray) -> float:
-    """Magenta/pink blob on water. Moderate signal (~0.17)."""
+    """True purple: B very high, R also high, G distinctly lower than both.
+    Pixel colours: (219,81,255), (219,134,255), (178,0,219) etc.
+    Excludes water (r<80), cloud demon (b not >> r), player (scores ~0.05).
+    """
     r, g, b, t = _f(arr)
-    return ((r > 160) & (g < 130) & (b > 120) & (b < 230) & (r > b * 0.7) & (b > g)).sum() / t
+    return ((b > 160) & (r > 80) & (g < b - 60) & (g < r)).sum() / t
 
 
 def _fire_demon(arr: np.ndarray) -> float:
@@ -117,7 +120,7 @@ def _bridge(arr: np.ndarray) -> float:
 # ---------------------------------------------------------------------------
 _DETECTORS = [
     (_cloud_demon, 0.25, "cloud_demon"),
-    (_hippo,       0.06, "hippo"),
+    (_hippo,       0.15, "hippo"),
     (_fire_demon,  0.10, "fire_demon"),  # hot-red core: embers=0.00, fire_demon=0.12, apple=0.08
     (_player,      0.30, "player"),
     (_zebra,       0.30, "zebra"),

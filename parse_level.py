@@ -24,9 +24,7 @@ ROWS = 12
 COLS = 15
 
 # Terrain labels that are actually objects on top of another terrain
-OBJECT_TERRAIN_MAP = {
-    "tomato_on_sand": ("sand", {"type": "item", "value": "tomato"}),
-}
+OBJECT_TERRAIN_MAP: dict = {}  # terrain labels that encode an object (none currently)
 
 
 def parse_level(tile_dir: Path, terrain_lookup: dict, letter_refs: dict) -> dict:

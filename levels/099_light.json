@@ -22,10 +22,6 @@
         "terrain": "unknown",
         "objects": [
           {
-            "type": "item",
-            "value": "tomato"
-          },
-          {
             "type": "sprite",
             "value": "apple"
           }
@@ -75,10 +71,6 @@
       {
         "terrain": "unknown",
         "objects": [
-          {
-            "type": "item",
-            "value": "tomato"
-          },
           {
             "type": "sprite",
             "value": "apple"
@@ -245,10 +237,6 @@
       {
         "terrain": "unknown",
         "objects": [
-          {
-            "type": "item",
-            "value": "tomato"
-          },
           {
             "type": "sprite",
             "value": "apple"
@@ -883,10 +871,6 @@
       {
         "terrain": "unknown",
         "objects": [
-          {
-            "type": "item",
-            "value": "tomato"
-          },
           {
             "type": "sprite",
             "value": "apple"

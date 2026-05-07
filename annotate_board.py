@@ -37,7 +37,6 @@ TERRAIN_COLORS: dict[str, tuple] = {
     "rock":          ( 130, 130, 130, 160),
     "mud":           ( 120,  70,  30, 160),
     "embers":        ( 230, 120,  20, 160),
-    "tomato_on_sand":( 200,  40,  40, 160),
     "pit":           (  20,  20,  20, 180),
 }
 TERRAIN_DEFAULT_COLOR = (160, 160, 160, 140)
