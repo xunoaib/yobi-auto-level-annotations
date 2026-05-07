@@ -495,13 +495,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "rhino"
-          }
-        ]
+        "terrain": "rock",
+        "objects": []
       }
     ],
     [
@@ -582,13 +577,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "rhino"
-          }
-        ]
+        "terrain": "rock",
+        "objects": []
       }
     ],
     [
@@ -669,13 +659,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "rhino"
-          }
-        ]
+        "terrain": "rock",
+        "objects": []
       }
     ],
     [
@@ -741,13 +726,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "rhino"
-          }
-        ]
+        "terrain": "rock",
+        "objects": []
       }
     ],
     [

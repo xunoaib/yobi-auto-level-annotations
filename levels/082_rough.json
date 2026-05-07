@@ -832,13 +832,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "rhino"
-          }
-        ]
+        "terrain": "rock",
+        "objects": []
       },
       {
         "terrain": "rock",

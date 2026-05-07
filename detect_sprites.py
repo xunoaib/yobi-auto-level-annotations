@@ -83,11 +83,17 @@ def _stone(arr: np.ndarray) -> float:
 
 
 def _rhino(arr: np.ndarray) -> float:
-    """Grey animal body with darker shadow areas (lower grey purity than stone)."""
+    """Grey animal body with darker shadow areas (lower grey purity than stone).
+    Rock walls also have grey+dark but include golden mortar pixels (gold>0.02).
+    Rhinos have no gold — used as disqualifier.
+    """
     r, g, b, t = _f(arr)
+    # Rock walls have golden/orange mortar between stones; rhinos have none
+    gold = ((r > 160) & (g > 100) & (g < 200) & (b < 100) & (r > g) & (g > b * 1.5)).sum() / t
+    if gold > 0.02:
+        return 0.0
     grey = ((np.abs(r - g) < 20) & (np.abs(g - b) < 20) & (r > 80) & (r < 200)).sum() / t
     dark = ((r < 60) & (g < 60) & (b < 60)).sum() / t
-    # rhino has significant grey AND some dark; stone has minimal dark
     if dark < 0.07:
         return 0.0
     return grey
