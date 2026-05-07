@@ -1,0 +1,38 @@
+{
+  "r02_c08": [
+    {
+      "type": "letter",
+      "value": "I"
+    }
+  ],
+  "r02_c12": [
+    {
+      "type": "letter",
+      "value": "R"
+    }
+  ],
+  "r03_c06": [
+    {
+      "type": "letter",
+      "value": "F"
+    }
+  ],
+  "r05_c04": [
+    {
+      "type": "sprite",
+      "value": "player"
+    }
+  ],
+  "r06_c13": [
+    {
+      "type": "letter",
+      "value": "S"
+    }
+  ],
+  "r08_c12": [
+    {
+      "type": "letter",
+      "value": "T"
+    }
+  ]
+}

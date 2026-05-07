@@ -1,0 +1,164 @@
+{
+  "r00_c09": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r00_c12": [
+    {
+      "type": "letter",
+      "value": "L"
+    }
+  ],
+  "r00_c13": [
+    {
+      "type": "letter",
+      "value": "L"
+    }
+  ],
+  "r02_c11": [
+    {
+      "type": "sprite",
+      "value": "zebra"
+    }
+  ],
+  "r03_c04": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r04_c03": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r04_c04": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r04_c05": [
+    {
+      "type": "sprite",
+      "value": "fire_demon"
+    }
+  ],
+  "r05_c00": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r05_c03": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r05_c04": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r05_c08": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r05_c09": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r05_c14": [
+    {
+      "type": "sprite",
+      "value": "zebra"
+    }
+  ],
+  "r06_c00": [
+    {
+      "type": "letter",
+      "value": "A"
+    }
+  ],
+  "r06_c08": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r07_c06": [
+    {
+      "type": "sprite",
+      "value": "player"
+    }
+  ],
+  "r07_c08": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r07_c09": [
+    {
+      "type": "letter",
+      "value": "Y"
+    }
+  ],
+  "r07_c14": [
+    {
+      "type": "sprite",
+      "value": "bridge"
+    }
+  ],
+  "r08_c04": [
+    {
+      "type": "sprite",
+      "value": "bridge"
+    }
+  ],
+  "r08_c08": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r08_c12": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r08_c14": [
+    {
+      "type": "sprite",
+      "value": "zebra"
+    }
+  ],
+  "r09_c12": [
+    {
+      "type": "letter",
+      "value": "A"
+    }
+  ],
+  "r10_c01": [
+    {
+      "type": "letter",
+      "value": "S"
+    }
+  ],
+  "r10_c05": [
+    {
+      "type": "letter",
+      "value": "W"
+    }
+  ]
+}

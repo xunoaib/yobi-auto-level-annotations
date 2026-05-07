@@ -1,0 +1,194 @@
+{
+  "r00_c01": [
+    {
+      "type": "sprite",
+      "value": "bridge"
+    }
+  ],
+  "r00_c08": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r00_c13": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r01_c00": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r01_c01": [
+    {
+      "type": "sprite",
+      "value": "bridge"
+    }
+  ],
+  "r01_c02": [
+    {
+      "type": "letter",
+      "value": "U"
+    }
+  ],
+  "r01_c08": [
+    {
+      "type": "letter",
+      "value": "R"
+    }
+  ],
+  "r01_c10": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r01_c13": [
+    {
+      "type": "letter",
+      "value": "R"
+    }
+  ],
+  "r02_c01": [
+    {
+      "type": "sprite",
+      "value": "bridge"
+    }
+  ],
+  "r02_c06": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r03_c04": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r03_c06": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r04_c07": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r04_c11": [
+    {
+      "type": "letter",
+      "value": "P"
+    }
+  ],
+  "r05_c11": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r06_c06": [
+    {
+      "type": "letter",
+      "value": "I"
+    }
+  ],
+  "r06_c14": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r07_c06": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r07_c12": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r07_c13": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r08_c00": [
+    {
+      "type": "sprite",
+      "value": "player"
+    }
+  ],
+  "r08_c02": [
+    {
+      "type": "letter",
+      "value": "S"
+    }
+  ],
+  "r08_c07": [
+    {
+      "type": "letter",
+      "value": "E"
+    }
+  ],
+  "r08_c12": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r08_c13": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r09_c10": [
+    {
+      "type": "sprite",
+      "value": "bridge"
+    }
+  ],
+  "r09_c14": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r10_c02": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r10_c04": [
+    {
+      "type": "letter",
+      "value": "S"
+    }
+  ],
+  "r11_c10": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r11_c13": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ]
+}

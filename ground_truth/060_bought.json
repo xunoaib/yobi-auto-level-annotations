@@ -1,0 +1,152 @@
+{
+  "r00_c11": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r00_c12": [
+    {
+      "type": "letter",
+      "value": "O"
+    }
+  ],
+  "r01_c02": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r01_c11": [
+    {
+      "type": "sprite",
+      "value": "hippo"
+    }
+  ],
+  "r02_c02": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r02_c03": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r02_c04": [
+    {
+      "type": "letter",
+      "value": "B"
+    }
+  ],
+  "r03_c02": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r03_c03": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r03_c04": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r03_c06": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r04_c02": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r04_c03": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r04_c04": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r04_c05": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r04_c14": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r05_c04": [
+    {
+      "type": "letter",
+      "value": "U"
+    }
+  ],
+  "r06_c00": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r06_c08": [
+    {
+      "type": "letter",
+      "value": "H"
+    }
+  ],
+  "r07_c10": [
+    {
+      "type": "letter",
+      "value": "T"
+    }
+  ],
+  "r07_c12": [
+    {
+      "type": "letter",
+      "value": "T"
+    }
+  ],
+  "r08_c12": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r09_c07": [
+    {
+      "type": "sprite",
+      "value": "player"
+    }
+  ],
+  "r10_c02": [
+    {
+      "type": "letter",
+      "value": "G"
+    }
+  ],
+  "r10_c11": [
+    {
+      "type": "sprite",
+      "value": "hippo"
+    }
+  ]
+}
