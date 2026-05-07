@@ -52,15 +52,20 @@ def _dominant_colour(arr: np.ndarray) -> str:
     if bright_green / total > 0.15:
         return "grass"
 
-    # Mud signature: pinkish-brown (134,81,81) — R is dominant, G≈B both ~60-100.
-    # Only fire when mud pixels outnumber water pixels so that water/mud edge
-    # tiles (where water is still the dominant colour) go to water.
+    # Water priority: >30% blue pixels → water, before the mud check.
+    # Needed because mud visually bleeds onto adjacent water tiles; when mud
+    # flanks a water tile on both sides the mud pixel count can exceed water
+    # even though the tile is fundamentally water.
     water_px = int(((b > 150) & (b > r * 1.5) & (b > g * 1.2)).sum())
+    if water_px / total > 0.30:
+        return "water"
+
+    # Mud signature: pinkish-brown (134,81,81) — R is dominant, G≈B both ~60-100.
     mud = int(((r > 100) & (r < 200)
                & (np.abs(g - b) < 25)
                & (r > g * 1.3)
                & (g > 40) & (g < 120)).sum())
-    if mud / total > 0.15 and mud > water_px:
+    if mud / total > 0.15:
         return "mud"
 
     # For everything else use a simple pixel vote.
