@@ -13,10 +13,12 @@ import argparse
 import json
 from pathlib import Path
 
+import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 from detect_letters import detect_letters, DEFAULT_REFS
 from classify_terrain import classify_level, _build_lookup as build_terrain_lookup
+from detect_sprites import detect_sprite
 
 TILE_SIZE = 64
 COLS = 15
@@ -27,6 +29,9 @@ COORD_COLOR = (255, 255, 255, 80)
 
 LETTER_BG   = (220,  50,  50, 180)
 LETTER_FG   = (255, 255, 255, 255)
+
+SPRITE_BG   = ( 40,  40, 180, 190)   # blue badge for sprites
+SPRITE_FG   = (255, 255, 255, 255)
 
 # Terrain label -> badge colour (RGBA)
 TERRAIN_COLORS: dict[str, tuple] = {
@@ -77,6 +82,7 @@ def annotate(board_path: Path, tile_dir: Path,
 
     font_terrain = _load_font(11)
     font_letter  = _load_font(26)
+    font_sprite  = _load_font(10)
     font_coord   = _load_font(9)
 
     # Grid lines
@@ -103,7 +109,19 @@ def annotate(board_path: Path, tile_dir: Path,
             fg = (255, 255, 255, 220)
             _draw_badge(draw, x, y, label, bg, fg, font_terrain, pad=3)
 
-    # Letter badges (drawn on top of terrain so they're always visible)
+    # Sprite badges (drawn above terrain)
+    if show in ("letters", "both"):
+        for row in range(ROWS):
+            for col in range(COLS):
+                tile_path = tile_dir / f"r{row:02d}_c{col:02d}.png"
+                arr = np.array(Image.open(tile_path).convert("RGB"))
+                sprites = detect_sprite(arr)
+                if sprites:
+                    x, y = col * TILE_SIZE, row * TILE_SIZE
+                    _draw_badge(draw, x, y, sprites[0]["value"],
+                                SPRITE_BG, SPRITE_FG, font_sprite, pad=3)
+
+    # Letter badges (drawn on top of everything)
     if show in ("letters", "both"):
         letters = detect_letters(tile_dir, letter_refs)
         for stem, letter in letters.items():

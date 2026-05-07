@@ -291,7 +291,7 @@
         "objects": [
           {
             "type": "sprite",
-            "value": "player"
+            "value": "rhino"
           }
         ]
       },
@@ -693,7 +693,7 @@
         "objects": [
           {
             "type": "sprite",
-            "value": "player"
+            "value": "rhino"
           }
         ]
       },

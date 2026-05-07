@@ -301,22 +301,12 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "rock",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "rock",
+        "objects": []
       },
       {
         "terrain": "unknown",
@@ -328,22 +318,12 @@
         ]
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "rock",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "rock",
+        "objects": []
       },
       {
         "terrain": "pit",

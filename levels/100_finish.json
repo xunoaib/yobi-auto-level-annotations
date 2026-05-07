@@ -129,7 +129,7 @@
         "objects": [
           {
             "type": "sprite",
-            "value": "player"
+            "value": "rhino"
           }
         ]
       },
@@ -138,13 +138,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "rock",
+        "objects": []
       },
       {
         "terrain": "sand",
@@ -249,7 +244,7 @@
         "objects": [
           {
             "type": "sprite",
-            "value": "player"
+            "value": "rhino"
           }
         ]
       },
@@ -325,7 +320,7 @@
         "objects": [
           {
             "type": "sprite",
-            "value": "player"
+            "value": "rhino"
           }
         ]
       },
@@ -334,7 +329,7 @@
         "objects": [
           {
             "type": "sprite",
-            "value": "player"
+            "value": "rhino"
           }
         ]
       },
@@ -343,7 +338,7 @@
         "objects": [
           {
             "type": "sprite",
-            "value": "player"
+            "value": "rhino"
           }
         ]
       },
@@ -352,7 +347,7 @@
         "objects": [
           {
             "type": "sprite",
-            "value": "player"
+            "value": "rhino"
           }
         ]
       },
@@ -792,7 +787,7 @@
         "objects": [
           {
             "type": "sprite",
-            "value": "player"
+            "value": "rhino"
           }
         ]
       },
@@ -801,13 +796,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "player"
-          }
-        ]
+        "terrain": "rock",
+        "objects": []
       },
       {
         "terrain": "sand",
@@ -883,7 +873,7 @@
         "objects": [
           {
             "type": "sprite",
-            "value": "player"
+            "value": "rhino"
           }
         ]
       },

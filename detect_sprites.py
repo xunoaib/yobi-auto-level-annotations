@@ -53,11 +53,17 @@ def _fire_demon(arr: np.ndarray) -> float:
 
 
 def _player(arr: np.ndarray) -> float:
-    """Gold halo + dark robe combo. Both must be present."""
+    """Gold halo + dark robe combo. Both must be present.
+    Disqualified when neutral-grey pixels dominate (rock walls, stone).
+    """
     r, g, b, t = _f(arr)
+    # Rock walls have 55–70% neutral grey; the player has 0%
+    grey = ((np.abs(r - g) < 25) & (np.abs(g - b) < 25) & (r > 80) & (r < 220)).sum() / t
+    if grey > 0.20:
+        return 0.0
     gold = ((r > 160) & (g > 100) & (g < 200) & (b < 100) & (r > g) & (g > b * 1.5)).sum() / t
     dark = ((r < 80) & (g < 60) & (b < 80)).sum() / t
-    return min(gold, dark) * 8  # both must be present; scale so threshold is ~1
+    return min(gold, dark) * 8
 
 
 def _zebra(arr: np.ndarray) -> float:
