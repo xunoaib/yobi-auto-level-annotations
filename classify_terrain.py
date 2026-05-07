@@ -46,11 +46,13 @@ def _dominant_colour(arr: np.ndarray) -> str:
     if rock_gray / total > 0.15:
         return "rock"
 
-    # Mud is also a solid tile type: require >25% mud-coloured pixels so that
-    # mixed sprite tiles (player, torch, etc.) with incidental brown tones
-    # don't get miscategorised.
-    mud = int(((r > 80) & (r < 180) & (g < 80) & (b < 60) & (r > g * 1.5)).sum())
-    if mud / total > 0.25:
+    # Mud signature: pinkish-brown (134,81,81) — R is dominant, G≈B both ~60-100.
+    # Distinct from embers (B≈0) and rock (R≈G≈B).
+    mud = int(((r > 100) & (r < 200)
+               & (np.abs(g - b) < 25)
+               & (r > g * 1.3)
+               & (g > 40) & (g < 120)).sum())
+    if mud / total > 0.15:
         return "mud"
 
     # For everything else use a simple pixel vote.
