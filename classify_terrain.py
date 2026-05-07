@@ -46,13 +46,21 @@ def _dominant_colour(arr: np.ndarray) -> str:
     if rock_gray / total > 0.15:
         return "rock"
 
+    # Grass is solid bright-green ground: a single uniform colour, so any tile
+    # with >15% bright-green pixels is grass even if mud bleeds through edges.
+    bright_green = int(((g > 175) & (r < 60) & (b < 60)).sum())
+    if bright_green / total > 0.15:
+        return "grass"
+
     # Mud signature: pinkish-brown (134,81,81) — R is dominant, G≈B both ~60-100.
-    # Distinct from embers (B≈0) and rock (R≈G≈B).
+    # Only fire when mud pixels outnumber water pixels so that water/mud edge
+    # tiles (where water is still the dominant colour) go to water.
+    water_px = int(((b > 150) & (b > r * 1.5) & (b > g * 1.2)).sum())
     mud = int(((r > 100) & (r < 200)
                & (np.abs(g - b) < 25)
                & (r > g * 1.3)
                & (g > 40) & (g < 120)).sum())
-    if mud / total > 0.15:
+    if mud / total > 0.15 and mud > water_px:
         return "mud"
 
     # For everything else use a simple pixel vote.
