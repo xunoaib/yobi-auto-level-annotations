@@ -1,0 +1,302 @@
+[
+  {
+    "cluster_id": 0,
+    "count": 2521,
+    "label": "sand"
+  },
+  {
+    "cluster_id": 1,
+    "count": 370,
+    "label": "N/A"
+  },
+  {
+    "cluster_id": 2,
+    "count": 352,
+    "label": "mud"
+  },
+  {
+    "cluster_id": 3,
+    "count": 194,
+    "label": "grass"
+  },
+  {
+    "cluster_id": 4,
+    "count": 134,
+    "label": "embers"
+  },
+  {
+    "cluster_id": 5,
+    "count": 108,
+    "label": "rock"
+  },
+  {
+    "cluster_id": 6,
+    "count": 107,
+    "label": "forest"
+  },
+  {
+    "cluster_id": 7,
+    "count": 105,
+    "label": "water"
+  },
+  {
+    "cluster_id": 8,
+    "count": 96,
+    "label": "water"
+  },
+  {
+    "cluster_id": 9,
+    "count": 85,
+    "label": "water"
+  },
+  {
+    "cluster_id": 10,
+    "count": 83,
+    "label": "grass"
+  },
+  {
+    "cluster_id": 11,
+    "count": 82,
+    "label": "forest"
+  },
+  {
+    "cluster_id": 12,
+    "count": 82,
+    "label": "grass"
+  },
+  {
+    "cluster_id": 13,
+    "count": 81,
+    "label": "rock"
+  },
+  {
+    "cluster_id": 14,
+    "count": 80,
+    "label": "grass"
+  },
+  {
+    "cluster_id": 15,
+    "count": 79,
+    "label": "water"
+  },
+  {
+    "cluster_id": 16,
+    "count": 78,
+    "label": "forest"
+  },
+  {
+    "cluster_id": 17,
+    "count": 72,
+    "label": "water"
+  },
+  {
+    "cluster_id": 18,
+    "count": 70,
+    "label": "embers"
+  },
+  {
+    "cluster_id": 19,
+    "count": 68,
+    "label": "grass"
+  },
+  {
+    "cluster_id": 20,
+    "count": 67,
+    "label": "grass"
+  },
+  {
+    "cluster_id": 21,
+    "count": 65,
+    "label": "forest"
+  },
+  {
+    "cluster_id": 22,
+    "count": 65,
+    "label": "rock"
+  },
+  {
+    "cluster_id": 23,
+    "count": 65,
+    "label": "water"
+  },
+  {
+    "cluster_id": 24,
+    "count": 64,
+    "label": "water"
+  },
+  {
+    "cluster_id": 25,
+    "count": 61,
+    "label": "rock"
+  },
+  {
+    "cluster_id": 26,
+    "count": 59,
+    "label": "rock"
+  },
+  {
+    "cluster_id": 27,
+    "count": 58,
+    "label": "water"
+  },
+  {
+    "cluster_id": 28,
+    "count": 57,
+    "label": "forest"
+  },
+  {
+    "cluster_id": 29,
+    "count": 57,
+    "label": "water"
+  },
+  {
+    "cluster_id": 30,
+    "count": 52,
+    "label": "rock"
+  },
+  {
+    "cluster_id": 31,
+    "count": 50,
+    "label": "green"
+  },
+  {
+    "cluster_id": 32,
+    "count": 50,
+    "label": "water"
+  },
+  {
+    "cluster_id": 33,
+    "count": 50,
+    "label": "rock"
+  },
+  {
+    "cluster_id": 34,
+    "count": 47,
+    "label": "water"
+  },
+  {
+    "cluster_id": 35,
+    "count": 46,
+    "label": "forest"
+  },
+  {
+    "cluster_id": 36,
+    "count": 46,
+    "label": "water"
+  },
+  {
+    "cluster_id": 37,
+    "count": 45,
+    "label": "water"
+  },
+  {
+    "cluster_id": 38,
+    "count": 43,
+    "label": "rock"
+  },
+  {
+    "cluster_id": 39,
+    "count": 42,
+    "label": "mud"
+  },
+  {
+    "cluster_id": 40,
+    "count": 41,
+    "label": "mud"
+  },
+  {
+    "cluster_id": 41,
+    "count": 41,
+    "label": "mud"
+  },
+  {
+    "cluster_id": 42,
+    "count": 41,
+    "label": "water"
+  },
+  {
+    "cluster_id": 43,
+    "count": 41,
+    "label": "water"
+  },
+  {
+    "cluster_id": 44,
+    "count": 40,
+    "label": "forest"
+  },
+  {
+    "cluster_id": 45,
+    "count": 39,
+    "label": "water"
+  },
+  {
+    "cluster_id": 46,
+    "count": 38,
+    "label": "forest"
+  },
+  {
+    "cluster_id": 47,
+    "count": 38,
+    "label": "forest"
+  },
+  {
+    "cluster_id": 48,
+    "count": 37,
+    "label": "tomato_on_sand"
+  },
+  {
+    "cluster_id": 49,
+    "count": 37,
+    "label": "grass"
+  },
+  {
+    "cluster_id": 50,
+    "count": 37,
+    "label": "water"
+  },
+  {
+    "cluster_id": 51,
+    "count": 36,
+    "label": "forest"
+  },
+  {
+    "cluster_id": 52,
+    "count": 36,
+    "label": "water"
+  },
+  {
+    "cluster_id": 53,
+    "count": 36,
+    "label": "water"
+  },
+  {
+    "cluster_id": 54,
+    "count": 36,
+    "label": "rock"
+  },
+  {
+    "cluster_id": 55,
+    "count": 35,
+    "label": "rock"
+  },
+  {
+    "cluster_id": 56,
+    "count": 35,
+    "label": "green"
+  },
+  {
+    "cluster_id": 57,
+    "count": 35,
+    "label": "water"
+  },
+  {
+    "cluster_id": 58,
+    "count": 35,
+    "label": "water"
+  },
+  {
+    "cluster_id": 59,
+    "count": 34,
+    "label": "water"
+  }
+]
