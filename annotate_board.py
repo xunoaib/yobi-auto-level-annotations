@@ -13,12 +13,10 @@ import argparse
 import json
 from pathlib import Path
 
-import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 from detect_letters import detect_letters, DEFAULT_REFS
 from classify_terrain import classify_level, _build_lookup as build_terrain_lookup
-from detect_sprites import detect_sprite
 
 TILE_SIZE = 64
 COLS = 15
@@ -109,17 +107,18 @@ def annotate(board_path: Path, tile_dir: Path,
             fg = (255, 255, 255, 220)
             _draw_badge(draw, x, y, label, bg, fg, font_terrain, pad=3)
 
-    # Sprite badges (drawn above terrain)
+    # Sprite badges — load from pre-parsed level JSON so deduplication is applied
     if show in ("letters", "both"):
-        for row in range(ROWS):
-            for col in range(COLS):
-                tile_path = tile_dir / f"r{row:02d}_c{col:02d}.png"
-                arr = np.array(Image.open(tile_path).convert("RGB"))
-                sprites = detect_sprite(arr)
-                if sprites:
-                    x, y = col * TILE_SIZE, row * TILE_SIZE
-                    _draw_badge(draw, x, y, sprites[0]["value"],
-                                SPRITE_BG, SPRITE_FG, font_sprite, pad=3)
+        level_json = Path("levels") / f"{tile_dir.name}.json"
+        if level_json.exists():
+            level_data = json.loads(level_json.read_text())
+            for row, grid_row in enumerate(level_data["grid"]):
+                for col, tile in enumerate(grid_row):
+                    sprite_objs = [o for o in tile["objects"] if o["type"] == "sprite"]
+                    if sprite_objs:
+                        x, y = col * TILE_SIZE, row * TILE_SIZE
+                        _draw_badge(draw, x, y, sprite_objs[0]["value"],
+                                    SPRITE_BG, SPRITE_FG, font_sprite, pad=3)
 
     # Letter badges (drawn on top of everything)
     if show in ("letters", "both"):
