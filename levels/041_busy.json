@@ -497,13 +497,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
         "terrain": "forest",
@@ -569,13 +564,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
         "terrain": "forest",
@@ -651,13 +641,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
         "terrain": "forest",
@@ -744,13 +729,8 @@
         ]
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
         "terrain": "unknown",

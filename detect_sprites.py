@@ -117,6 +117,10 @@ def _bridge(arr: np.ndarray) -> float:
     """
     r, g, b, t = _f(arr)
     # r < 220 excludes bright apple/flame orange (255,134,0); bridge planks are (178,81,0)
+    # Pit-edge grass tiles have dark near-black pixels; real bridges have none
+    pit = ((r < 30) & (g < 30) & (b < 60)).sum() / t
+    if pit > 0.05:
+        return 0.0
     plank = ((r > 130) & (r < 220) & (g > 30) & (g < 145) & (b < 30) & (r > g * 1.4)).sum() / t
     # Require non-embers background (grass, sand, or water present)
     bright_green = ((g > 175) & (r < 60) & (b < 60)).sum() / t
