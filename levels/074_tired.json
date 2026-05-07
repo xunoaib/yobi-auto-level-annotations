@@ -351,8 +351,13 @@
         "objects": []
       },
       {
-        "terrain": "sand",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "bridge"
+          }
+        ]
       },
       {
         "terrain": "unknown",

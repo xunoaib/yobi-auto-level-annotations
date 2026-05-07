@@ -161,8 +161,13 @@
         ]
       },
       {
-        "terrain": "grass",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "bridge"
+          }
+        ]
       },
       {
         "terrain": "grass",

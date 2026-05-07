@@ -111,22 +111,34 @@ def _apple(arr: np.ndarray) -> float:
 
 
 def _bridge(arr: np.ndarray) -> float:
-    """Parallel brown/orange planks on a non-embers background.
-    Planks: warm orange-brown (178,81,0) style.
-    Background must include grass or sand (not pure embers).
+    """Parallel brown/orange planks spanning the full tile width.
+
+    Discriminators:
+    - pit > 0.05 AND plank < 0.17: grass/pit-edge false positive (low planks)
+    - plank pixels concentrated on one side: mud-edge strip, not real planks
+    - background (grass + sand + water + pit) < 0.15: likely embers terrain
     """
     r, g, b, t = _f(arr)
-    # r < 220 excludes bright apple/flame orange (255,134,0); bridge planks are (178,81,0)
-    # Pit-edge grass tiles have dark near-black pixels; real bridges have none
-    pit = ((r < 30) & (g < 30) & (b < 60)).sum() / t
-    if pit > 0.05:
+    pit         = ((r < 30) & (g < 30) & (b < 60)).sum() / t
+    plank_mask  = (r > 130) & (r < 220) & (g > 30) & (g < 145) & (b < 30) & (r > g * 1.4)
+    plank       = plank_mask.sum() / t
+
+    # Pit-edge grass tiles: high pit + low planks — disqualify
+    if pit > 0.05 and plank < 0.17:
         return 0.0
-    plank = ((r > 130) & (r < 220) & (g > 30) & (g < 145) & (b < 30) & (r > g * 1.4)).sum() / t
-    # Require non-embers background (grass, sand, or water present)
+
+    # Real planks span the full tile width; mud-edge strips sit on one side only
+    if plank_mask.any():
+        cols      = np.where(plank_mask)[1]
+        left_frac = (cols < 32).sum() / len(cols)
+        if left_frac < 0.10 or left_frac > 0.90:
+            return 0.0
+
+    # Require non-embers background (grass, sand, water, or pit counts)
     bright_green = ((g > 175) & (r < 60) & (b < 60)).sum() / t
     sand         = ((r > 200) & (g > 200) & (b > 100) & (b < 210) & (np.abs(r - g) < 40)).sum() / t
     water        = ((b > 150) & (b > r * 1.5) & (b > g * 1.2)).sum() / t
-    background   = bright_green + sand + water
+    background   = bright_green + sand + water + pit
     return plank if background > 0.15 else 0.0
 
 

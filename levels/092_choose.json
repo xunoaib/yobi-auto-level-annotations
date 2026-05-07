@@ -72,13 +72,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "water",
+        "objects": []
       },
       {
         "terrain": "mud",
@@ -691,8 +686,13 @@
         "objects": []
       },
       {
-        "terrain": "mud",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "bridge"
+          }
+        ]
       },
       {
         "terrain": "mud",
