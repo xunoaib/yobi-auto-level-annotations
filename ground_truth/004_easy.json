@@ -17,6 +17,12 @@
       "value": "Z"
     }
   ],
+  "r07_c06": [
+    {
+      "type": "sprite",
+      "value": "gazelle"
+    }
+  ],
   "r07_c12": [
     {
       "type": "sprite",

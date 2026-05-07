@@ -38,13 +38,13 @@
   "r05_c04": [
     {
       "type": "sprite",
-      "value": "bridge"
+      "value": "lion"
     }
   ],
   "r06_c05": [
     {
       "type": "sprite",
-      "value": "bridge"
+      "value": "lion"
     }
   ],
   "r06_c10": [
@@ -68,7 +68,7 @@
   "r08_c11": [
     {
       "type": "sprite",
-      "value": "bridge"
+      "value": "lion"
     }
   ],
   "r11_c03": [

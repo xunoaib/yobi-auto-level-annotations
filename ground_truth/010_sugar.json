@@ -1,4 +1,10 @@
 {
+  "r00_c09": [
+    {
+      "type": "sprite",
+      "value": "gazelle"
+    }
+  ],
   "r02_c00": [
     {
       "type": "letter",
