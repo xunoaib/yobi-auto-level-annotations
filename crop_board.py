@@ -4,15 +4,18 @@
 Removes:
   - Left UI panel (wizard, MAP, RESTART buttons)  x < 296
   - Right outer border                             x >= 1256
+  - Top header/landscape graphic                   y < 146
   - Bottom text/sentence bar                       y >= 914
+
+Result is exactly 960×768 px (15 tiles × 12 tiles at 64 px/tile).
 """
 
 import argparse
 from pathlib import Path
 from PIL import Image
 
-# Determined by diffing multiple screenshots to find the static vs dynamic regions.
-CROP_BOX = (296, 0, 1256, 914)  # (left, upper, right, lower)
+# Left/right from pixel-diff analysis; top derived from 15×12 tile grid at 64 px/tile.
+CROP_BOX = (296, 146, 1256, 914)  # (left, upper, right, lower) → 960×768
 
 
 def crop_screenshot(src: Path, dst: Path) -> None:
