@@ -76,8 +76,13 @@
         "objects": []
       },
       {
-        "terrain": "water",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "hippo"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -177,11 +182,15 @@
         "objects": []
       },
       {
-        "terrain": "sand",
+        "terrain": "unknown",
         "objects": [
           {
             "type": "item",
             "value": "tomato"
+          },
+          {
+            "type": "sprite",
+            "value": "apple"
           }
         ]
       },
@@ -198,11 +207,15 @@
         "objects": []
       },
       {
-        "terrain": "sand",
+        "terrain": "unknown",
         "objects": [
           {
             "type": "item",
             "value": "tomato"
+          },
+          {
+            "type": "sprite",
+            "value": "apple"
           }
         ]
       },
@@ -229,8 +242,13 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "stone"
+          }
+        ]
       },
       {
         "terrain": "rock",
@@ -283,19 +301,28 @@
         "objects": []
       },
       {
-        "terrain": "water",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "player"
+          }
+        ]
       },
       {
         "terrain": "sand",
         "objects": []
       },
       {
-        "terrain": "sand",
+        "terrain": "unknown",
         "objects": [
           {
             "type": "item",
             "value": "tomato"
+          },
+          {
+            "type": "sprite",
+            "value": "apple"
           }
         ]
       },
@@ -461,11 +488,15 @@
         "objects": []
       },
       {
-        "terrain": "sand",
+        "terrain": "unknown",
         "objects": [
           {
             "type": "item",
             "value": "tomato"
+          },
+          {
+            "type": "sprite",
+            "value": "apple"
           }
         ]
       },
@@ -533,11 +564,15 @@
         "objects": []
       },
       {
-        "terrain": "sand",
+        "terrain": "unknown",
         "objects": [
           {
             "type": "item",
             "value": "tomato"
+          },
+          {
+            "type": "sprite",
+            "value": "apple"
           }
         ]
       },
@@ -626,8 +661,13 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "stone"
+          }
+        ]
       },
       {
         "terrain": "rock",
@@ -743,8 +783,13 @@
     ],
     [
       {
-        "terrain": "sand",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "player"
+          }
+        ]
       },
       {
         "terrain": "sand",

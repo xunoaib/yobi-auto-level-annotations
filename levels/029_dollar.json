@@ -152,8 +152,13 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "player"
+          }
+        ]
       },
       {
         "terrain": "pit",
@@ -168,8 +173,13 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "player"
+          }
+        ]
       },
       {
         "terrain": "rock",
@@ -238,8 +248,13 @@
         "objects": []
       },
       {
-        "terrain": "water",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "cloud_demon"
+          }
+        ]
       },
       {
         "terrain": "rock",
@@ -415,8 +430,13 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "player"
+          }
+        ]
       },
       {
         "terrain": "mud",
@@ -482,8 +502,13 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "player"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -498,8 +523,13 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "stone"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -540,8 +570,13 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "player"
+          }
+        ]
       },
       {
         "terrain": "rock",
@@ -630,8 +665,13 @@
         "objects": []
       },
       {
-        "terrain": "water",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "player"
+          }
+        ]
       },
       {
         "terrain": "water",
@@ -656,8 +696,13 @@
     ],
     [
       {
-        "terrain": "grass",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "apple"
+          }
+        ]
       },
       {
         "terrain": "rock",
@@ -672,8 +717,13 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "stone"
+          }
+        ]
       },
       {
         "terrain": "grass",
@@ -708,8 +758,13 @@
         "objects": []
       },
       {
-        "terrain": "grass",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "apple"
+          }
+        ]
       },
       {
         "terrain": "rock",
@@ -771,8 +826,13 @@
         "objects": []
       },
       {
-        "terrain": "grass",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "bridge"
+          }
+        ]
       },
       {
         "terrain": "rock",

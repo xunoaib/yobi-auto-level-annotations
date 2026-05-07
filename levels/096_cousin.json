@@ -6,8 +6,13 @@
   "grid": [
     [
       {
-        "terrain": "grass",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "player"
+          }
+        ]
       },
       {
         "terrain": "water",
@@ -26,11 +31,15 @@
         "objects": []
       },
       {
-        "terrain": "sand",
+        "terrain": "unknown",
         "objects": [
           {
             "type": "item",
             "value": "tomato"
+          },
+          {
+            "type": "sprite",
+            "value": "apple"
           }
         ]
       },
@@ -95,8 +104,13 @@
         "objects": []
       },
       {
-        "terrain": "grass",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "apple"
+          }
+        ]
       },
       {
         "terrain": "forest",
@@ -169,7 +183,59 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "zebra"
+          }
+        ]
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "apple"
+          }
+        ]
+      },
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "terrain": "forest",
+        "objects": []
+      },
+      {
+        "terrain": "water",
         "objects": []
       },
       {
@@ -193,7 +259,27 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "forest",
         "objects": []
       },
       {
@@ -207,68 +293,6 @@
     ],
     [
       {
-        "terrain": "forest",
-        "objects": []
-      },
-      {
-        "terrain": "water",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "forest",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "forest",
-        "objects": []
-      },
-      {
-        "terrain": "forest",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      }
-    ],
-    [
-      {
         "terrain": "grass",
         "objects": []
       },
@@ -321,8 +345,13 @@
         "objects": []
       },
       {
-        "terrain": "grass",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "apple"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -356,8 +385,13 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "stone"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -481,8 +515,13 @@
         "objects": []
       },
       {
-        "terrain": "water",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "player"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -650,8 +689,13 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "rhino"
+          }
+        ]
       }
     ],
     [
@@ -727,12 +771,22 @@
         ]
       },
       {
-        "terrain": "grass",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "apple"
+          }
+        ]
       },
       {
-        "terrain": "rock",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "stone"
+          }
+        ]
       },
       {
         "terrain": "grass",
@@ -743,8 +797,13 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "zebra"
+          }
+        ]
       },
       {
         "terrain": "water",
@@ -768,8 +827,13 @@
         "objects": []
       },
       {
-        "terrain": "sand",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "fire_demon"
+          }
+        ]
       },
       {
         "terrain": "forest",

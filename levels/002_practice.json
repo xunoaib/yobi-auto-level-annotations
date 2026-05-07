@@ -148,11 +148,15 @@
         "objects": []
       },
       {
-        "terrain": "sand",
+        "terrain": "unknown",
         "objects": [
           {
             "type": "item",
             "value": "tomato"
+          },
+          {
+            "type": "sprite",
+            "value": "apple"
           }
         ]
       },
@@ -216,11 +220,15 @@
         "objects": []
       },
       {
-        "terrain": "sand",
+        "terrain": "unknown",
         "objects": [
           {
             "type": "item",
             "value": "tomato"
+          },
+          {
+            "type": "sprite",
+            "value": "apple"
           }
         ]
       },
@@ -249,8 +257,13 @@
         "objects": []
       },
       {
-        "terrain": "water",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "hippo"
+          }
+        ]
       },
       {
         "terrain": "water",
@@ -398,11 +411,15 @@
         "objects": []
       },
       {
-        "terrain": "sand",
+        "terrain": "unknown",
         "objects": [
           {
             "type": "item",
             "value": "tomato"
+          },
+          {
+            "type": "sprite",
+            "value": "apple"
           }
         ]
       },
@@ -441,8 +458,13 @@
         "objects": []
       },
       {
-        "terrain": "water",
-        "objects": []
+        "terrain": "unknown",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "player"
+          }
+        ]
       },
       {
         "terrain": "water",
@@ -470,11 +492,15 @@
         "objects": []
       },
       {
-        "terrain": "sand",
+        "terrain": "unknown",
         "objects": [
           {
             "type": "item",
             "value": "tomato"
+          },
+          {
+            "type": "sprite",
+            "value": "apple"
           }
         ]
       },

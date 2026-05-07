@@ -13,8 +13,12 @@ import argparse
 import json
 from pathlib import Path
 
+import numpy as np
+from PIL import Image
+
 from classify_terrain import classify_level, _build_lookup as build_terrain_lookup
 from detect_letters import detect_letters, DEFAULT_REFS
+from detect_sprites import detect_sprite
 
 ROWS = 12
 COLS = 15
@@ -51,8 +55,15 @@ def parse_level(tile_dir: Path, terrain_lookup: dict, letter_refs: dict) -> dict
             else:
                 terrain = raw_terrain
 
-            # Letter objects — the gray letter box obscures the underlying
-            # terrain, so terrain is unreliable for these tiles.
+            # Sprite objects (player, enemies, items)
+            tile_path = tile_dir / f"{stem}.png"
+            tile_arr = np.array(Image.open(tile_path).convert("RGB"))
+            sprite_objects = detect_sprite(tile_arr)
+            if sprite_objects:
+                terrain = "unknown"
+                objects.extend(sprite_objects)
+
+            # Letter objects — the gray letter box obscures the underlying terrain.
             if stem in letter_map:
                 terrain = "unknown"
                 objects.append({"type": "letter", "value": letter_map[stem]})
