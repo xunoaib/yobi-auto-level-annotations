@@ -46,14 +46,19 @@ def _dominant_colour(arr: np.ndarray) -> str:
     if rock_gray / total > 0.15:
         return "rock"
 
+    # Mud is also a solid tile type: require >25% mud-coloured pixels so that
+    # mixed sprite tiles (player, torch, etc.) with incidental brown tones
+    # don't get miscategorised.
+    mud = int(((r > 80) & (r < 180) & (g < 80) & (b < 60) & (r > g * 1.5)).sum())
+    if mud / total > 0.25:
+        return "mud"
+
     # For everything else use a simple pixel vote.
     votes = {
         "water":  int(((b > 150) & (b > r * 1.5) & (b > g * 1.2)).sum()),
         "grass":  int(((g > 175) & (r < 60)  & (b < 60)).sum()),
         "sand":   int(((r > 200) & (g > 200) & (b > 100) & (b < 210)
                        & (np.abs(r - g) < 40)).sum()),
-        "mud":    int(((r > 80)  & (r < 180) & (g < 80) & (b < 60)
-                       & (r > g * 1.5)).sum()),
         "embers": int(((r > 180) & (g > 100) & (g < 200) & (b < 80)).sum()),
     }
     return max(votes, key=lambda k: votes[k])
