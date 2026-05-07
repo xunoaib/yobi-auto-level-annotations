@@ -157,7 +157,7 @@
   {
     "cluster_id": 31,
     "count": 50,
-    "label": "green"
+    "label": "grass"
   },
   {
     "cluster_id": 32,
@@ -282,7 +282,7 @@
   {
     "cluster_id": 56,
     "count": 35,
-    "label": "green"
+    "label": "grass"
   },
   {
     "cluster_id": 57,
