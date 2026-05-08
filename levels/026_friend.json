@@ -23,7 +23,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "gazelle"
+          }
+        ]
       },
       {
         "terrain": "grass",
@@ -769,7 +774,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "gazelle"
+          }
+        ]
       },
       {
         "terrain": "grass",

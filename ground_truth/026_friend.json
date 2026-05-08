@@ -1,4 +1,10 @@
 {
+  "r00_c04": [
+    {
+      "type": "sprite",
+      "value": "gazelle"
+    }
+  ],
   "r00_c05": [
     {
       "type": "sprite",
@@ -69,6 +75,12 @@
     {
       "type": "sprite",
       "value": "apple"
+    }
+  ],
+  "r11_c05": [
+    {
+      "type": "sprite",
+      "value": "gazelle"
     }
   ],
   "r11_c14": [

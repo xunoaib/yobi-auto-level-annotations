@@ -65,6 +65,12 @@
       "value": "stone"
     }
   ],
+  "r07_c13": [
+    {
+      "type": "sprite",
+      "value": "gazelle"
+    }
+  ],
   "r08_c04": [
     {
       "type": "sprite",

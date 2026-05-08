@@ -5,6 +5,12 @@
       "value": "apple"
     }
   ],
+  "r01_c13": [
+    {
+      "type": "sprite",
+      "value": "gazelle"
+    }
+  ],
   "r02_c08": [
     {
       "type": "letter",

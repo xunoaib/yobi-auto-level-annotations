@@ -53,6 +53,12 @@
       "value": "O"
     }
   ],
+  "r10_c13": [
+    {
+      "type": "sprite",
+      "value": "gazelle"
+    }
+  ],
   "r11_c13": [
     {
       "type": "letter",

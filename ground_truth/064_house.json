@@ -89,6 +89,12 @@
       "value": "S"
     }
   ],
+  "r11_c06": [
+    {
+      "type": "sprite",
+      "value": "gazelle"
+    }
+  ],
   "r11_c08": [
     {
       "type": "sprite",

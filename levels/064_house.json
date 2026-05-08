@@ -788,7 +788,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "gazelle"
+          }
+        ]
       },
       {
         "terrain": "water",

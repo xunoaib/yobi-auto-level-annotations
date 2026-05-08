@@ -11,6 +11,12 @@
       "value": "O"
     }
   ],
+  "r00_c07": [
+    {
+      "type": "sprite",
+      "value": "gazelle"
+    }
+  ],
   "r01_c09": [
     {
       "type": "sprite",
