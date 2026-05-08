@@ -47,6 +47,12 @@
       "value": "S"
     }
   ],
+  "r09_c14": [
+    {
+      "type": "sprite",
+      "value": "token"
+    }
+  ],
   "r10_c01": [
     {
       "type": "sprite",

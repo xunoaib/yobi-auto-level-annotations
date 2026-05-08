@@ -895,8 +895,13 @@
         "objects": []
       },
       {
-        "terrain": "forest",
-        "objects": []
+        "terrain": "grass",
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "token"
+          }
+        ]
       },
       {
         "terrain": "sand",

@@ -77,6 +77,12 @@
       "value": "stone"
     }
   ],
+  "r10_c11": [
+    {
+      "type": "sprite",
+      "value": "token"
+    }
+  ],
   "r11_c00": [
     {
       "type": "sprite",

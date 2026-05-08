@@ -41,6 +41,12 @@
       "value": "bridge"
     }
   ],
+  "r03_c13": [
+    {
+      "type": "sprite",
+      "value": "token"
+    }
+  ],
   "r04_c04": [
     {
       "type": "sprite",

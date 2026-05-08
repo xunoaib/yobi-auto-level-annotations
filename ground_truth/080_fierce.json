@@ -17,6 +17,12 @@
       "value": "F"
     }
   ],
+  "r04_c01": [
+    {
+      "type": "sprite",
+      "value": "token"
+    }
+  ],
   "r04_c07": [
     {
       "type": "letter",

@@ -83,6 +83,12 @@
       "value": "stone"
     }
   ],
+  "r10_c01": [
+    {
+      "type": "sprite",
+      "value": "token"
+    }
+  ],
   "r10_c13": [
     {
       "type": "letter",

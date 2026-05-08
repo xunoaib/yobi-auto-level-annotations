@@ -185,6 +185,12 @@
       "value": "apple"
     }
   ],
+  "r11_c13": [
+    {
+      "type": "sprite",
+      "value": "token"
+    }
+  ],
   "r11_c14": [
     {
       "type": "sprite",

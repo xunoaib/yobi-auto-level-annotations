@@ -17,6 +17,12 @@
       "value": "cloud_demon"
     }
   ],
+  "r01_c02": [
+    {
+      "type": "sprite",
+      "value": "token"
+    }
+  ],
   "r01_c05": [
     {
       "type": "sprite",

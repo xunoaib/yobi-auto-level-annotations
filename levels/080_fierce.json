@@ -274,7 +274,12 @@
       },
       {
         "terrain": "water",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "token"
+          }
+        ]
       },
       {
         "terrain": "rock",

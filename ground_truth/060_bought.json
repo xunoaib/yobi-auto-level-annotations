@@ -53,6 +53,12 @@
       "value": "H"
     }
   ],
+  "r06_c14": [
+    {
+      "type": "sprite",
+      "value": "token"
+    }
+  ],
   "r07_c02": [
     {
       "type": "sprite",
