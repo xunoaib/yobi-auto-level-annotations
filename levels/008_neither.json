@@ -363,7 +363,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
@@ -562,7 +562,7 @@
     ],
     [
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",

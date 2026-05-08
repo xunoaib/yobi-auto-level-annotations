@@ -1,0 +1,92 @@
+{
+  "r00_c00": [
+    {
+      "type": "letter",
+      "value": "C"
+    }
+  ],
+  "r00_c05": [
+    {
+      "type": "letter",
+      "value": "H"
+    }
+  ],
+  "r01_c02": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r01_c11": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r05_c01": [
+    {
+      "type": "sprite",
+      "value": "hippo"
+    }
+  ],
+  "r05_c05": [
+    {
+      "type": "letter",
+      "value": "S"
+    }
+  ],
+  "r05_c06": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r05_c09": [
+    {
+      "type": "letter",
+      "value": "R"
+    }
+  ],
+  "r05_c10": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r05_c11": [
+    {
+      "type": "letter",
+      "value": "R"
+    }
+  ],
+  "r06_c01": [
+    {
+      "type": "sprite",
+      "value": "hippo"
+    }
+  ],
+  "r10_c02": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r10_c08": [
+    {
+      "type": "sprite",
+      "value": "player"
+    }
+  ],
+  "r11_c03": [
+    {
+      "type": "letter",
+      "value": "E"
+    }
+  ],
+  "r11_c13": [
+    {
+      "type": "letter",
+      "value": "U"
+    }
+  ]
+}

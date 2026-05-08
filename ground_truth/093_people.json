@@ -1,0 +1,158 @@
+{
+  "r01_c05": [
+    {
+      "type": "letter",
+      "value": "E"
+    }
+  ],
+  "r02_c01": [
+    {
+      "type": "letter",
+      "value": "P"
+    }
+  ],
+  "r02_c09": [
+    {
+      "type": "letter",
+      "value": "L"
+    }
+  ],
+  "r02_c10": [
+    {
+      "type": "sprite",
+      "value": "elephant"
+    }
+  ],
+  "r03_c04": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r03_c07": [
+    {
+      "type": "sprite",
+      "value": "elephant"
+    }
+  ],
+  "r04_c02": [
+    {
+      "type": "sprite",
+      "value": "elephant"
+    }
+  ],
+  "r04_c08": [
+    {
+      "type": "sprite",
+      "value": "elephant"
+    }
+  ],
+  "r04_c10": [
+    {
+      "type": "sprite",
+      "value": "elephant"
+    }
+  ],
+  "r06_c00": [
+    {
+      "type": "letter",
+      "value": "E"
+    }
+  ],
+  "r06_c05": [
+    {
+      "type": "sprite",
+      "value": "elephant"
+    }
+  ],
+  "r06_c14": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r07_c14": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r08_c01": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r08_c14": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r09_c00": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r09_c05": [
+    {
+      "type": "sprite",
+      "value": "elephant"
+    }
+  ],
+  "r09_c12": [
+    {
+      "type": "sprite",
+      "value": "player"
+    }
+  ],
+  "r09_c14": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r10_c00": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r10_c01": [
+    {
+      "type": "sprite",
+      "value": "bridge"
+    }
+  ],
+  "r10_c02": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r10_c05": [
+    {
+      "type": "letter",
+      "value": "P"
+    }
+  ],
+  "r11_c02": [
+    {
+      "type": "letter",
+      "value": "O"
+    }
+  ],
+  "r11_c07": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r11_c08": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ]
+}

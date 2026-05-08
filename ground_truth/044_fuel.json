@@ -1,0 +1,92 @@
+{
+  "r00_c13": [
+    {
+      "type": "letter",
+      "value": "P"
+    }
+  ],
+  "r00_c14": [
+    {
+      "type": "letter",
+      "value": "H"
+    }
+  ],
+  "r01_c00": [
+    {
+      "type": "letter",
+      "value": "F"
+    }
+  ],
+  "r01_c04": [
+    {
+      "type": "letter",
+      "value": "I"
+    }
+  ],
+  "r02_c05": [
+    {
+      "type": "sprite",
+      "value": "rhino"
+    }
+  ],
+  "r04_c09": [
+    {
+      "type": "sprite",
+      "value": "fire_demon"
+    }
+  ],
+  "r05_c13": [
+    {
+      "type": "letter",
+      "value": "L"
+    }
+  ],
+  "r08_c10": [
+    {
+      "type": "sprite",
+      "value": "elephant"
+    }
+  ],
+  "r09_c04": [
+    {
+      "type": "sprite",
+      "value": "player"
+    }
+  ],
+  "r10_c01": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ],
+  "r10_c02": [
+    {
+      "type": "letter",
+      "value": "E"
+    }
+  ],
+  "r10_c14": [
+    {
+      "type": "letter",
+      "value": "U"
+    }
+  ],
+  "r11_c11": [
+    {
+      "type": "sprite",
+      "value": "rhino"
+    }
+  ],
+  "r11_c12": [
+    {
+      "type": "sprite",
+      "value": "bridge"
+    }
+  ],
+  "r11_c14": [
+    {
+      "type": "sprite",
+      "value": "apple"
+    }
+  ]
+}

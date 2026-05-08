@@ -62,7 +62,10 @@ def parse_level(tile_dir: Path, terrain_lookup: dict, letter_refs: dict,
                 match = detect_sprite_template(tile_arr, sprite_templates)
                 if match:
                     obj = {"type": "sprite", "value": match["value"]}
-                    terrain = background_terrain(tile_arr, "sprite", obj["value"])
+                    terrain = background_terrain(
+                        tile_arr, "sprite", obj["value"],
+                        sprite_template=match.get("template"),
+                    )
                     objects.append(obj)
 
             # Letter objects — infer background terrain from outer ring.

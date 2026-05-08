@@ -60,7 +60,7 @@
         "objects": []
       },
       {
-        "terrain": "forest",
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",

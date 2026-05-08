@@ -45,7 +45,7 @@
         ]
       },
       {
-        "terrain": "forest",
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",
@@ -532,7 +532,7 @@
         "objects": []
       },
       {
-        "terrain": "sand",
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",

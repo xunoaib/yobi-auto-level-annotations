@@ -1,0 +1,44 @@
+{
+  "r00_c04": [
+    {
+      "type": "letter",
+      "value": "F"
+    }
+  ],
+  "r00_c06": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r00_c14": [
+    {
+      "type": "sprite",
+      "value": "bridge"
+    }
+  ],
+  "r01_c00": [
+    {
+      "type": "letter",
+      "value": "F"
+    }
+  ],
+  "r02_c04": [
+    {
+      "type": "letter",
+      "value": "O"
+    }
+  ],
+  "r07_c13": [
+    {
+      "type": "sprite",
+      "value": "rhino"
+    }
+  ],
+  "r09_c02": [
+    {
+      "type": "sprite",
+      "value": "player"
+    }
+  ]
+}

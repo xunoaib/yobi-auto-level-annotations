@@ -54,12 +54,6 @@ def _dominant_colour(arr: np.ndarray,
     if dark_green / total > 0.10:
         return "forest"
 
-    # Rock: >15% near-neutral gray pixels.
-    rock_gray = int(((np.abs(r - g) < 25) & (np.abs(g - b) < 25)
-                     & (r > 80) & (r < 220)).sum())
-    if rock_gray / total > 0.15:
-        return "rock"
-
     # Grass is solid bright-green ground: a single uniform colour, so any tile
     # with >15% bright-green pixels is grass even if mud bleeds through edges.
     bright_green = int(((g > 175) & (r < 60) & (b < 60)).sum())
@@ -71,12 +65,18 @@ def _dominant_colour(arr: np.ndarray,
     if water_px / total > 0.30:
         return "water"
 
-    # Sand priority: check before mud so mud bleed from adjacent tiles
-    # doesn't override sand tiles that are 50%+ their own colour.
+    # Sand: warm yellow (R≈G high, B moderate). Check before rock because
+    # sprite edge pixels (gray) can inflate the rock count on sand backgrounds.
     sand_px = int(((r > 200) & (g > 200) & (b > 100) & (b < 210)
                    & (np.abs(r - g) < 40)).sum())
     if sand_px / total > 0.20:
         return "sand"
+
+    # Rock: >15% near-neutral gray pixels.
+    rock_gray = int(((np.abs(r - g) < 25) & (np.abs(g - b) < 25)
+                     & (r > 80) & (r < 220)).sum())
+    if rock_gray / total > 0.15:
+        return "rock"
 
     # Mud signature: pinkish-brown (134,81,81) — R is dominant, G≈B both ~60-100.
     mud = int(((r > 100) & (r < 200)
@@ -106,8 +106,9 @@ _LETTER_BOX = (16, 16, 48, 48)
 
 # Sprites whose underlying terrain is always the same
 _HARDCODED_TERRAIN: dict[str, str] = {
-    "player": "water",
-    "hippo":  "water",
+    "player":     "water",
+    "hippo":      "water",
+    "alligator":  "water",
 }
 
 # Per-sprite-type pixel exclusion masks (functions: arr → bool mask)
@@ -136,11 +137,14 @@ def _sprite_exclude_mask(arr: np.ndarray, sprite_type: str) -> "np.ndarray | Non
 
 
 def background_terrain(tile_arr: np.ndarray, obj_type: str,
-                       obj_value: str) -> str:
+                       obj_value: str,
+                       sprite_template: "np.ndarray | None" = None) -> str:
     """Infer the terrain type underneath a sprite or letter object.
 
-    Uses the object's pixel signature as an exclusion mask so only
-    background pixels contribute to the terrain classification.
+    If *sprite_template* (an RGBA array) is supplied, its alpha channel is
+    used as the exclusion mask — sprite pixels (alpha>0) are ignored and
+    only background pixels contribute to terrain classification.
+    Falls back to per-color heuristics when no template is available.
     """
     # Hardcoded for sprites that always occupy a fixed terrain type
     if obj_type == "sprite" and obj_value in _HARDCODED_TERRAIN:
@@ -154,7 +158,11 @@ def background_terrain(tile_arr: np.ndarray, obj_type: str,
         return _dominant_colour(tile_arr, exclude=mask)
 
     if obj_type == "sprite":
-        mask = _sprite_exclude_mask(tile_arr, obj_value)
+        if sprite_template is not None:
+            # Use alpha channel of matched template as exclusion mask
+            mask = sprite_template[:, :, 3] > 0
+        else:
+            mask = _sprite_exclude_mask(tile_arr, obj_value)
         return _dominant_colour(tile_arr, exclude=mask)
 
     return _dominant_colour(tile_arr)

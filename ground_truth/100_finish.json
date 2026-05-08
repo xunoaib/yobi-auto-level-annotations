@@ -1,0 +1,92 @@
+{
+  "r00_c03": [
+    {
+      "type": "sprite",
+      "value": "bridge"
+    }
+  ],
+  "r00_c14": [
+    {
+      "type": "letter",
+      "value": "S"
+    }
+  ],
+  "r01_c00": [
+    {
+      "type": "sprite",
+      "value": "cloud_demon"
+    }
+  ],
+  "r01_c05": [
+    {
+      "type": "sprite",
+      "value": "bridge"
+    }
+  ],
+  "r03_c00": [
+    {
+      "type": "letter",
+      "value": "H"
+    }
+  ],
+  "r05_c02": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r05_c05": [
+    {
+      "type": "letter",
+      "value": "I"
+    }
+  ],
+  "r05_c07": [
+    {
+      "type": "sprite",
+      "value": "fire_demon"
+    }
+  ],
+  "r06_c01": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r06_c04": [
+    {
+      "type": "sprite",
+      "value": "fire_demon"
+    }
+  ],
+  "r07_c13": [
+    {
+      "type": "sprite",
+      "value": "player"
+    }
+  ],
+  "r08_c03": [
+    {
+      "type": "letter",
+      "value": "N"
+    }
+  ],
+  "r10_c02": [
+    {
+      "type": "letter",
+      "value": "F"
+    }
+  ],
+  "r10_c04": [
+    {
+      "type": "sprite",
+      "value": "stone"
+    }
+  ],
+  "r11_c14": [
+    {
+      "type": "letter",
+      "value": "I"
+    }
+  ]
+}

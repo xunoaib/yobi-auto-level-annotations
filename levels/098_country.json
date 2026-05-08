@@ -370,7 +370,7 @@
         "objects": []
       },
       {
-        "terrain": "sand",
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",

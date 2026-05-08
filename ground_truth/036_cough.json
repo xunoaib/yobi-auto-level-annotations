@@ -1,0 +1,62 @@
+{
+  "r00_c01": [
+    {
+      "type": "letter",
+      "value": "U"
+    }
+  ],
+  "r01_c12": [
+    {
+      "type": "letter",
+      "value": "F"
+    }
+  ],
+  "r01_c13": [
+    {
+      "type": "letter",
+      "value": "F"
+    }
+  ],
+  "r02_c06": [
+    {
+      "type": "letter",
+      "value": "H"
+    }
+  ],
+  "r04_c11": [
+    {
+      "type": "letter",
+      "value": "G"
+    }
+  ],
+  "r04_c13": [
+    {
+      "type": "sprite",
+      "value": "bridge"
+    }
+  ],
+  "r06_c01": [
+    {
+      "type": "sprite",
+      "value": "player"
+    }
+  ],
+  "r06_c08": [
+    {
+      "type": "letter",
+      "value": "K"
+    }
+  ],
+  "r08_c14": [
+    {
+      "type": "letter",
+      "value": "O"
+    }
+  ],
+  "r11_c13": [
+    {
+      "type": "letter",
+      "value": "C"
+    }
+  ]
+}

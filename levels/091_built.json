@@ -6,7 +6,7 @@
   "grid": [
     [
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -14,7 +14,7 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "grass",
         "objects": []
       },
       {
@@ -60,7 +60,7 @@
         ]
       },
       {
-        "terrain": "forest",
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",
@@ -69,15 +69,15 @@
         ]
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       }
     ],
@@ -103,7 +103,7 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -131,7 +131,7 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -162,7 +162,7 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -203,7 +203,7 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -211,17 +211,13 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       }
     ],
     [
       {
-        "terrain": "rock",
-        "objects": []
-      },
-      {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -229,7 +225,11 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -270,7 +270,7 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -351,7 +351,7 @@
     ],
     [
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -375,7 +375,7 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -412,7 +412,7 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       }
     ],
@@ -434,15 +434,15 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -462,7 +462,7 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -484,7 +484,7 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
@@ -497,15 +497,11 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
-      },
-      {
-        "terrain": "water",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -521,7 +517,11 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
@@ -534,11 +534,7 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
-      },
-      {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -546,13 +542,17 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
         "objects": []
       }
     ],
     [
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -560,7 +560,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",
@@ -605,68 +605,6 @@
         "objects": []
       },
       {
-        "terrain": "rock",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      }
-    ],
-    [
-      {
-        "terrain": "rock",
-        "objects": []
-      },
-      {
-        "terrain": "water",
-        "objects": []
-      },
-      {
-        "terrain": "water",
-        "objects": []
-      },
-      {
-        "terrain": "water",
-        "objects": []
-      },
-      {
-        "terrain": "water",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
-        "terrain": "sand",
-        "objects": []
-      },
-      {
         "terrain": "sand",
         "objects": []
       },
@@ -681,7 +619,69 @@
     ],
     [
       {
-        "terrain": "rock",
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      },
+      {
+        "terrain": "sand",
+        "objects": []
+      }
+    ],
+    [
+      {
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -722,15 +722,15 @@
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -748,7 +748,7 @@
     ],
     [
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {
@@ -793,7 +793,7 @@
         ]
       },
       {
-        "terrain": "rock",
+        "terrain": "sand",
         "objects": []
       },
       {

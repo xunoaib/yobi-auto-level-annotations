@@ -64,6 +64,7 @@ def detect_sprite_template(
     """
     best_name: str | None = None
     best_conf: float = 0.0
+    best_template: "np.ndarray | None" = None
 
     for name, template in templates.items():
         rotations = [0] if name in NO_ROTATION else [0, 1, 2, 3]
@@ -73,7 +74,13 @@ def detect_sprite_template(
             if score > best_conf:
                 best_conf = score
                 best_name = name
+                best_template = rotated
 
     if best_conf >= threshold and best_name is not None:
-        return {"type": "sprite", "value": best_name, "confidence": round(best_conf, 3)}
+        return {
+            "type": "sprite",
+            "value": best_name,
+            "confidence": round(best_conf, 3),
+            "template": best_template,
+        }
     return None
