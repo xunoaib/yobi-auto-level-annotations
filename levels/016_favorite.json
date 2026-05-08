@@ -294,7 +294,7 @@
         ]
       },
       {
-        "terrain": "water",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",

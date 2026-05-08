@@ -389,7 +389,7 @@
         "objects": []
       },
       {
-        "terrain": "embers",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",

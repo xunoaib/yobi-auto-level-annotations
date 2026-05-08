@@ -30,7 +30,7 @@
         "objects": []
       },
       {
-        "terrain": "water",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
@@ -308,7 +308,7 @@
         "objects": []
       },
       {
-        "terrain": "water",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",

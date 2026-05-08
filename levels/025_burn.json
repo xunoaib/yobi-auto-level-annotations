@@ -113,7 +113,7 @@
         "objects": []
       },
       {
-        "terrain": "embers",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
@@ -255,7 +255,7 @@
         "objects": []
       },
       {
-        "terrain": "embers",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",

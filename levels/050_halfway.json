@@ -396,7 +396,7 @@
         "objects": []
       },
       {
-        "terrain": "water",
+        "terrain": "grass",
         "objects": [
           {
             "type": "sprite",

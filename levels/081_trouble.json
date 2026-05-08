@@ -219,7 +219,7 @@
         "objects": []
       },
       {
-        "terrain": "water",
+        "terrain": "mud",
         "objects": [
           {
             "type": "sprite",

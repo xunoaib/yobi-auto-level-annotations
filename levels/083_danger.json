@@ -193,7 +193,7 @@
         "objects": []
       },
       {
-        "terrain": "embers",
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",
@@ -793,7 +793,7 @@
         "objects": []
       },
       {
-        "terrain": "water",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
