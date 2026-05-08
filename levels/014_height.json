@@ -34,7 +34,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "mud",
         "objects": [
           {
             "type": "letter",
@@ -191,7 +191,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
@@ -230,7 +230,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
@@ -359,7 +359,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "sand",
         "objects": [
           {
             "type": "letter",
@@ -468,7 +468,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",
@@ -497,7 +497,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "mud",
         "objects": [
           {
             "type": "letter",
@@ -677,7 +677,12 @@
       },
       {
         "terrain": "mud",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "bridge"
+          }
+        ]
       },
       {
         "terrain": "mud",
@@ -704,7 +709,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "mud",
         "objects": [
           {
             "type": "sprite",
@@ -713,7 +718,7 @@
         ]
       },
       {
-        "terrain": "unknown",
+        "terrain": "mud",
         "objects": [
           {
             "type": "sprite",
@@ -728,7 +733,7 @@
     ],
     [
       {
-        "terrain": "unknown",
+        "terrain": "mud",
         "objects": [
           {
             "type": "letter",
@@ -757,7 +762,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "mud",
         "objects": [
           {
             "type": "letter",
@@ -782,7 +787,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "mud",
         "objects": [
           {
             "type": "letter",

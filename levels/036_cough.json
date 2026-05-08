@@ -10,7 +10,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",
@@ -101,13 +101,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "sand",
+        "objects": []
       },
       {
         "terrain": "sand",
@@ -126,7 +121,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",
@@ -135,7 +130,7 @@
         ]
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",
@@ -174,7 +169,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",
@@ -323,7 +318,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "sand",
         "objects": [
           {
             "type": "letter",
@@ -336,7 +331,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
@@ -417,7 +412,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",
@@ -450,7 +445,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",
@@ -603,7 +598,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "sand",
         "objects": [
           {
             "type": "letter",
@@ -790,7 +785,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",

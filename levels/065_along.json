@@ -10,7 +10,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "sprite",
@@ -39,7 +39,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",
@@ -48,7 +48,7 @@
         ]
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "sprite",
@@ -61,7 +61,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",
@@ -78,7 +78,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",
@@ -145,7 +145,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "sprite",
@@ -270,7 +270,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
@@ -313,7 +313,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",
@@ -380,7 +380,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
@@ -389,7 +389,7 @@
         ]
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",
@@ -406,7 +406,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",
@@ -423,13 +423,8 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
         "terrain": "forest",
@@ -512,7 +507,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",
@@ -533,7 +528,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",
@@ -546,7 +541,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "sprite",
@@ -585,7 +580,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "sprite",
@@ -606,7 +601,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "sprite",
@@ -715,7 +710,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "rock",
         "objects": [
           {
             "type": "sprite",

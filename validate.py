@@ -24,6 +24,7 @@ from pathlib import Path
 
 from classify_terrain import _build_lookup as build_terrain_lookup
 from detect_letters import DEFAULT_REFS
+from match_sprites import load_templates
 from parse_level import parse_level
 
 
@@ -32,12 +33,13 @@ def load_ground_truth(gt_file: Path) -> dict[str, list]:
 
 
 def detect_objects(level_name: str, tiles_root: Path,
-                   terrain_lookup: dict, letter_refs: dict) -> dict[str, list]:
+                   terrain_lookup: dict, letter_refs: dict,
+                   sprite_templates: "dict | None" = None) -> dict[str, list]:
     """Re-run the full pipeline; return {stem: [objects]} for non-empty tiles."""
     tile_dir = tiles_root / level_name
     if not tile_dir.exists():
         return {}
-    data = parse_level(tile_dir, terrain_lookup, letter_refs)
+    data = parse_level(tile_dir, terrain_lookup, letter_refs, sprite_templates)
     result: dict[str, list] = {}
     for r, row in enumerate(data["grid"]):
         for c, tile in enumerate(row):
@@ -82,6 +84,7 @@ def main() -> None:
     with open(args.refs) as f:
         letter_refs = json.load(f)
     terrain_lookup = build_terrain_lookup()
+    sprite_templates = load_templates()
 
     if args.levels:
         gt_files = [args.gt / f"{stem}.json" for stem in args.levels]
@@ -102,7 +105,7 @@ def main() -> None:
 
         level_name = gt_file.stem
         truth    = load_ground_truth(gt_file)
-        detected = detect_objects(level_name, args.tiles, terrain_lookup, letter_refs)
+        detected = detect_objects(level_name, args.tiles, terrain_lookup, letter_refs, sprite_templates)
         missing, extra, ok = diff(detected, truth)
 
         total_missing += len(missing)

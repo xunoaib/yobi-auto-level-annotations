@@ -80,7 +80,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "embers",
         "objects": [
           {
             "type": "letter",
@@ -125,7 +125,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "embers",
         "objects": [
           {
             "type": "sprite",
@@ -331,7 +331,12 @@
       },
       {
         "terrain": "embers",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "bridge"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -354,7 +359,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "embers",
         "objects": [
           {
             "type": "sprite",
@@ -397,7 +402,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "embers",
         "objects": [
           {
             "type": "letter",
@@ -512,7 +517,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "sand",
         "objects": [
           {
             "type": "letter",
@@ -535,7 +540,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "embers",
         "objects": [
           {
             "type": "letter",
@@ -606,7 +611,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "sand",
         "objects": [
           {
             "type": "letter",
@@ -623,7 +628,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",
@@ -670,7 +675,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "embers",
         "objects": [
           {
             "type": "sprite",
@@ -703,7 +708,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "sand",
         "objects": [
           {
             "type": "letter",

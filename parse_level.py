@@ -16,9 +16,10 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
-from classify_terrain import classify_level, _build_lookup as build_terrain_lookup
+from classify_terrain import classify_level, _build_lookup as build_terrain_lookup, background_terrain
 from detect_letters import detect_letters, DEFAULT_REFS
-from detect_sprites import detect_sprite, _player as player_score
+from match_sprites import load_templates, detect_sprite_template
+from detect_sprites import _player as player_score
 
 ROWS = 12
 COLS = 15
@@ -27,7 +28,8 @@ COLS = 15
 OBJECT_TERRAIN_MAP: dict = {}  # terrain labels that encode an object (none currently)
 
 
-def parse_level(tile_dir: Path, terrain_lookup: dict, letter_refs: dict) -> dict:
+def parse_level(tile_dir: Path, terrain_lookup: dict, letter_refs: dict,
+                sprite_templates: "dict | None" = None) -> dict:
     """Return a structured level dict for one level directory."""
     word = tile_dir.name.split("_", 1)[1].upper()
 
@@ -53,17 +55,19 @@ def parse_level(tile_dir: Path, terrain_lookup: dict, letter_refs: dict) -> dict
             else:
                 terrain = raw_terrain
 
-            # Sprite objects (player, enemies, items)
+            # Sprite objects — template matching (colour fallback omitted)
             tile_path = tile_dir / f"{stem}.png"
             tile_arr = np.array(Image.open(tile_path).convert("RGB"))
-            sprite_objects = detect_sprite(tile_arr)
-            if sprite_objects:
-                terrain = "unknown"
-                objects.extend(sprite_objects)
+            if sprite_templates:
+                match = detect_sprite_template(tile_arr, sprite_templates)
+                if match:
+                    obj = {"type": "sprite", "value": match["value"]}
+                    terrain = background_terrain(tile_arr, "sprite", obj["value"])
+                    objects.append(obj)
 
-            # Letter objects — the gray letter box obscures the underlying terrain.
+            # Letter objects — infer background terrain from outer ring.
             if stem in letter_map:
-                terrain = "unknown"
+                terrain = background_terrain(tile_arr, "letter", letter_map[stem])
                 objects.append({"type": "letter", "value": letter_map[stem]})
 
             grid_row.append({"terrain": terrain, "objects": objects})
@@ -125,13 +129,14 @@ def main() -> None:
     args = parser.parse_args()
 
     terrain_lookup = build_terrain_lookup()
+    sprite_templates = load_templates()
     with open(args.refs) as f:
         letter_refs = json.load(f)
 
     for tile_dir in args.dirs:
         if not tile_dir.is_dir():
             continue
-        level = parse_level(tile_dir, terrain_lookup, letter_refs)
+        level = parse_level(tile_dir, terrain_lookup, letter_refs, sprite_templates)
 
         if args.outdir:
             args.outdir.mkdir(parents=True, exist_ok=True)

@@ -6,7 +6,7 @@
   "grid": [
     [
       {
-        "terrain": "unknown",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
@@ -15,49 +15,24 @@
         ]
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
         "terrain": "sand",
@@ -68,7 +43,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "sand",
         "objects": [
           {
             "type": "letter",
@@ -85,7 +60,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "sprite",
@@ -94,13 +69,8 @@
         ]
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
         "terrain": "mud",
@@ -113,13 +83,8 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
         "terrain": "water",
@@ -180,13 +145,8 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
         "terrain": "water",
@@ -197,31 +157,16 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
         "terrain": "grass",
@@ -248,7 +193,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "mud",
         "objects": [
           {
             "type": "letter",
@@ -267,13 +212,8 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
         "terrain": "water",
@@ -334,13 +274,8 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
         "terrain": "water",
@@ -355,7 +290,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "water",
         "objects": [
           {
             "type": "letter",
@@ -372,31 +307,16 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "bridge"
-          }
-        ]
+        "terrain": "grass",
+        "objects": []
       },
       {
         "terrain": "grass",
@@ -421,13 +341,8 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
         "terrain": "water",
@@ -482,7 +397,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "mud",
         "objects": [
           {
             "type": "letter",
@@ -493,13 +408,8 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
         "terrain": "water",
@@ -526,7 +436,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "mud",
         "objects": [
           {
             "type": "letter",
@@ -565,13 +475,8 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
         "terrain": "water",
@@ -594,7 +499,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "mud",
         "objects": [
           {
             "type": "letter",
@@ -637,13 +542,8 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
         "terrain": "water",
@@ -704,13 +604,8 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
         "terrain": "water",
@@ -745,7 +640,7 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "grass",
         "objects": [
           {
             "type": "letter",
@@ -776,16 +671,7 @@
     ],
     [
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
-      },
-      {
-        "terrain": "water",
+        "terrain": "embers",
         "objects": []
       },
       {
@@ -809,7 +695,11 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
+        "terrain": "water",
+        "objects": []
+      },
+      {
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",
@@ -852,98 +742,48 @@
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
         "terrain": "grass",
         "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
-        "terrain": "unknown",
-        "objects": [
-          {
-            "type": "sprite",
-            "value": "fire_demon"
-          }
-        ]
+        "terrain": "embers",
+        "objects": []
       },
       {
         "terrain": "grass",
