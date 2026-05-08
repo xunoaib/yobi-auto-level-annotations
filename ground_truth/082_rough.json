@@ -113,6 +113,12 @@
       "value": "hippo"
     }
   ],
+  "r08_c11": [
+    {
+      "type": "sprite",
+      "value": "hippo"
+    }
+  ],
   "r09_c04": [
     {
       "type": "sprite",

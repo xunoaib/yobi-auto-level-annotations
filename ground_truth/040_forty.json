@@ -1,4 +1,10 @@
 {
+  "r01_c02": [
+    {
+      "type": "sprite",
+      "value": "hippo"
+    }
+  ],
   "r01_c12": [
     {
       "type": "letter",

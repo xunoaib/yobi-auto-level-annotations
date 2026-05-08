@@ -76,5 +76,11 @@
       "type": "sprite",
       "value": "player"
     }
+  ],
+  "r10_c02": [
+    {
+      "type": "sprite",
+      "value": "hippo"
+    }
   ]
 }

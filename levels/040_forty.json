@@ -77,7 +77,12 @@
       },
       {
         "terrain": "water",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "hippo"
+          }
+        ]
       },
       {
         "terrain": "sand",

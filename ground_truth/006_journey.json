@@ -23,6 +23,12 @@
       "value": "rhino"
     }
   ],
+  "r04_c08": [
+    {
+      "type": "sprite",
+      "value": "hippo"
+    }
+  ],
   "r05_c01": [
     {
       "type": "letter",

@@ -101,6 +101,18 @@
       "value": "stone"
     }
   ],
+  "r07_c09": [
+    {
+      "type": "sprite",
+      "value": "hippo"
+    }
+  ],
+  "r07_c10": [
+    {
+      "type": "sprite",
+      "value": "hippo"
+    }
+  ],
   "r08_c04": [
     {
       "type": "letter",

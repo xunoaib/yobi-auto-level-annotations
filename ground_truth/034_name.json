@@ -29,6 +29,12 @@
       "value": "I"
     }
   ],
+  "r05_c05": [
+    {
+      "type": "sprite",
+      "value": "hippo"
+    }
+  ],
   "r05_c14": [
     {
       "type": "letter",

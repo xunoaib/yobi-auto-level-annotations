@@ -88,5 +88,11 @@
       "type": "letter",
       "value": "G"
     }
+  ],
+  "r10_c11": [
+    {
+      "type": "sprite",
+      "value": "hippo"
+    }
   ]
 }
