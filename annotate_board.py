@@ -126,7 +126,6 @@ def annotate(board_path: Path, tile_dir: Path,
     draw = ImageDraw.Draw(overlay)
 
     font_terrain = _load_font(11)
-    font_letter  = _load_font(26)
     font_sprite  = _load_font(10)
     font_axis    = _load_font(13)
 
@@ -201,7 +200,7 @@ def annotate(board_path: Path, tile_dir: Path,
             row, col = int(stem[1:3]), int(stem[5:7])
             x = MARGIN_LEFT + col * TILE_SIZE
             y = MARGIN_TOP  + row * TILE_SIZE
-            _draw_badge(draw, x, y, letter, LETTER_BG, LETTER_FG, font_letter, pad=5, anchor_bottom=True)
+            _draw_badge(draw, x, y, letter, LETTER_BG, LETTER_FG, font_sprite, pad=3, anchor_bottom=True)
 
     result = Image.alpha_composite(board, overlay).convert("RGB")
     out_path.parent.mkdir(parents=True, exist_ok=True)
