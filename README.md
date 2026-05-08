@@ -1,3 +1,5 @@
+> **Note:** Every line of code in this repository was written by an AI assistant through iterative prompting. Treat it accordingly.
+
 # Yobi Level Extraction
 
 Extracts structured tile data from screenshots of *Yobi's Basic Spelling Tricks* (1994 DOS edutainment game). Parses all 101 levels into JSON maps of terrain type and objects per tile.
