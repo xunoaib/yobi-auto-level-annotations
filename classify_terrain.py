@@ -65,18 +65,16 @@ def _dominant_colour(arr: np.ndarray,
     if water_px / total > 0.30:
         return "water"
 
-    # Sand: warm yellow (R≈G high, B moderate). Check before rock because
-    # sprite edge pixels (gray) can inflate the rock count on sand backgrounds.
-    sand_px = int(((r > 200) & (g > 200) & (b > 100) & (b < 210)
-                   & (np.abs(r - g) < 40)).sum())
-    if sand_px / total > 0.20:
-        return "sand"
-
-    # Rock: >15% near-neutral gray pixels.
+    # Sand (warm yellow) and rock (neutral gray) are checked together so that
+    # whichever dominates wins.  This handles both pure-terrain tiles and tiles
+    # where sprite edge pixels bleed into the background count (e.g. an elephant
+    # on sand has ~18% gray edges that would otherwise trigger the rock check).
+    sand_px   = int(((r > 200) & (g > 200) & (b > 100) & (b < 210)
+                     & (np.abs(r - g) < 40)).sum())
     rock_gray = int(((np.abs(r - g) < 25) & (np.abs(g - b) < 25)
                      & (r > 80) & (r < 220)).sum())
-    if rock_gray / total > 0.15:
-        return "rock"
+    if sand_px / total > 0.20 or rock_gray / total > 0.15:
+        return "sand" if sand_px > rock_gray else "rock"
 
     # Mud signature: pinkish-brown (134,81,81) — R is dominant, G≈B both ~60-100.
     mud = int(((r > 100) & (r < 200)
