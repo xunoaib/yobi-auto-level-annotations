@@ -5,6 +5,12 @@
       "value": "I"
     }
   ],
+  "r01_c06": [
+    {
+      "type": "sprite",
+      "value": "jeep"
+    }
+  ],
   "r01_c10": [
     {
       "type": "sprite",

@@ -23,6 +23,12 @@
       "value": "A"
     }
   ],
+  "r04_c12": [
+    {
+      "type": "sprite",
+      "value": "jeep"
+    }
+  ],
   "r05_c00": [
     {
       "type": "sprite",

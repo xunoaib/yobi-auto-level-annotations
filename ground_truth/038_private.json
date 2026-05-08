@@ -35,6 +35,12 @@
       "value": "E"
     }
   ],
+  "r05_c05": [
+    {
+      "type": "sprite",
+      "value": "jeep"
+    }
+  ],
   "r07_c00": [
     {
       "type": "letter",

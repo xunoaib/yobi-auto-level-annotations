@@ -41,6 +41,12 @@
       "value": "L"
     }
   ],
+  "r08_c07": [
+    {
+      "type": "sprite",
+      "value": "jeep"
+    }
+  ],
   "r08_c10": [
     {
       "type": "sprite",

@@ -47,6 +47,12 @@
       "value": "apple"
     }
   ],
+  "r08_c05": [
+    {
+      "type": "sprite",
+      "value": "jeep"
+    }
+  ],
   "r10_c03": [
     {
       "type": "sprite",

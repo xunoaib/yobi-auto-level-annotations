@@ -65,6 +65,12 @@
       "value": "player"
     }
   ],
+  "r08_c13": [
+    {
+      "type": "sprite",
+      "value": "jeep"
+    }
+  ],
   "r09_c09": [
     {
       "type": "sprite",

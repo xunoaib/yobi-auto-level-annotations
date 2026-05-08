@@ -98,7 +98,12 @@
       },
       {
         "terrain": "forest",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "jeep"
+          }
+        ]
       },
       {
         "terrain": "sand",

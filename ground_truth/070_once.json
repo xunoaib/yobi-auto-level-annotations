@@ -65,6 +65,18 @@
       "value": "W"
     }
   ],
+  "r05_c02": [
+    {
+      "type": "sprite",
+      "value": "jeep"
+    }
+  ],
+  "r05_c09": [
+    {
+      "type": "sprite",
+      "value": "jeep"
+    }
+  ],
   "r05_c13": [
     {
       "type": "letter",

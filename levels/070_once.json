@@ -380,7 +380,12 @@
       },
       {
         "terrain": "forest",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "jeep"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -408,7 +413,12 @@
       },
       {
         "terrain": "forest",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "jeep"
+          }
+        ]
       },
       {
         "terrain": "grass",
