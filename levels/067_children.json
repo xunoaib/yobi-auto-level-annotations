@@ -438,7 +438,7 @@
         "objects": []
       },
       {
-        "terrain": "water",
+        "terrain": "sand",
         "objects": [
           {
             "type": "letter",

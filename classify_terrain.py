@@ -91,7 +91,8 @@ def _dominant_colour(arr: np.ndarray,
                        & (np.abs(r - g) < 40)).sum()),
         "embers": int(((r > 180) & (g > 100) & (g < 200) & (b < 80)).sum()),
     }
-    return max(votes, key=lambda k: votes[k])
+    best = max(votes, key=lambda k: votes[k])
+    return best if votes[best] > 0 else "sand"
 
 
 # ---------------------------------------------------------------------------
@@ -162,7 +163,15 @@ def background_terrain(tile_arr: np.ndarray, obj_type: str,
         x1, y1, x2, y2 = _LETTER_BOX
         mask = np.zeros(tile_arr.shape[:2], dtype=bool)
         mask[y1:y2, x1:x2] = True
-        return _dominant_colour(tile_arr, exclude=mask)
+        terrain = _dominant_colour(tile_arr, exclude=mask)
+        # Letters can never be on water — re-classify excluding water pixels too
+        if terrain == "water":
+            r_ = tile_arr[:, :, 0].astype(float)
+            g_ = tile_arr[:, :, 1].astype(float)
+            b_ = tile_arr[:, :, 2].astype(float)
+            water_mask = (b_ > 150) & (b_ > r_ * 1.5) & (b_ > g_ * 1.2)
+            terrain = _dominant_colour(tile_arr, exclude=mask | water_mask)
+        return terrain
 
     if obj_type == "sprite":
         if sprite_template is not None:
