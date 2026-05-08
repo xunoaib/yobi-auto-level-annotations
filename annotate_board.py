@@ -22,8 +22,12 @@ TILE_SIZE = 64
 COLS = 15
 ROWS = 12
 
+# Axis label margins (pixels added outside the tile grid)
+MARGIN_LEFT = 36
+MARGIN_TOP  = 28
+
 GRID_LINE   = (255, 255, 255, 60)
-COORD_COLOR = (255, 255, 255, 80)
+AXIS_COLOR  = (220, 220, 220, 255)
 
 LETTER_BG = (220, 50, 50, 200)
 LETTER_FG = (255, 255, 255, 255)
@@ -104,28 +108,50 @@ def annotate(board_path: Path, tile_dir: Path,
              letter_refs: dict, terrain_lookup: dict,
              show: str, out_path: Path) -> None:
 
-    board = Image.open(board_path).convert("RGBA")
-    overlay = Image.new("RGBA", board.size, (0, 0, 0, 0))
+    board_raw = Image.open(board_path).convert("RGBA")
+    # Add margins for axis labels
+    w = MARGIN_LEFT + COLS * TILE_SIZE
+    h = MARGIN_TOP  + ROWS * TILE_SIZE
+    board = Image.new("RGBA", (w, h), (30, 30, 30, 255))
+    board.paste(board_raw, (MARGIN_LEFT, MARGIN_TOP))
+
+    overlay = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
 
     font_terrain = _load_font(11)
     font_letter  = _load_font(26)
     font_sprite  = _load_font(10)
-    font_coord   = _load_font(9)
+    font_axis    = _load_font(13)
 
-    # Grid lines
+    # Grid lines (offset into tile area)
     for col in range(COLS + 1):
-        draw.line([(col * TILE_SIZE, 0), (col * TILE_SIZE, ROWS * TILE_SIZE)],
+        x = MARGIN_LEFT + col * TILE_SIZE
+        draw.line([(x, MARGIN_TOP), (x, MARGIN_TOP + ROWS * TILE_SIZE)],
                   fill=GRID_LINE, width=1)
     for row in range(ROWS + 1):
-        draw.line([(0, row * TILE_SIZE), (COLS * TILE_SIZE, row * TILE_SIZE)],
+        y = MARGIN_TOP + row * TILE_SIZE
+        draw.line([(MARGIN_LEFT, y), (MARGIN_LEFT + COLS * TILE_SIZE, y)],
                   fill=GRID_LINE, width=1)
 
-    # Row/col coordinates (top-left corner of each tile)
+    # Column numbers along the top axis
+    for col in range(COLS):
+        label = str(col)
+        bbox = font_axis.getbbox(label)
+        tw = bbox[2] - bbox[0]
+        cx = MARGIN_LEFT + col * TILE_SIZE + TILE_SIZE // 2
+        cy = MARGIN_TOP // 2
+        draw.text((cx - tw // 2 - bbox[0], cy - (bbox[3] - bbox[1]) // 2 - bbox[1]),
+                  label, fill=AXIS_COLOR, font=font_axis)
+
+    # Row numbers along the left axis
     for row in range(ROWS):
-        for col in range(COLS):
-            draw.text((col * TILE_SIZE + 2, row * TILE_SIZE + 2),
-                      f"{row},{col}", fill=COORD_COLOR, font=font_coord)
+        label = str(row)
+        bbox = font_axis.getbbox(label)
+        tw = bbox[2] - bbox[0]
+        cx = MARGIN_LEFT // 2
+        cy = MARGIN_TOP + row * TILE_SIZE + TILE_SIZE // 2
+        draw.text((cx - tw // 2 - bbox[0], cy - (bbox[3] - bbox[1]) // 2 - bbox[1]),
+                  label, fill=AXIS_COLOR, font=font_axis)
 
     # Load the pre-parsed level JSON (sprites + background terrain already computed)
     level_json = Path("levels") / f"{tile_dir.name}.json"
@@ -136,7 +162,8 @@ def annotate(board_path: Path, tile_dir: Path,
         terrain_map = classify_level(tile_dir, terrain_lookup)
         for stem, label in terrain_map.items():
             row, col = int(stem[1:3]), int(stem[5:7])
-            x, y = col * TILE_SIZE, row * TILE_SIZE
+            x = MARGIN_LEFT + col * TILE_SIZE
+            y = MARGIN_TOP  + row * TILE_SIZE
 
             # For object tiles, show the background terrain from the JSON
             if level_data:
@@ -154,7 +181,8 @@ def annotate(board_path: Path, tile_dir: Path,
                 sprite_objs = [o for o in tile["objects"] if o["type"] == "sprite"]
                 if sprite_objs:
                     name = sprite_objs[0]["value"]
-                    x, y = col * TILE_SIZE, row * TILE_SIZE
+                    x = MARGIN_LEFT + col * TILE_SIZE
+                    y = MARGIN_TOP  + row * TILE_SIZE
                     bg = SPRITE_COLORS.get(name, (40, 40, 180, 210))
                     _draw_badge(draw, x, y, name, bg, SPRITE_FG_DEFAULT,
                                 font_sprite, pad=3, anchor_bottom=True)
@@ -164,7 +192,8 @@ def annotate(board_path: Path, tile_dir: Path,
         letters = detect_letters(tile_dir, letter_refs)
         for stem, letter in letters.items():
             row, col = int(stem[1:3]), int(stem[5:7])
-            x, y = col * TILE_SIZE, row * TILE_SIZE
+            x = MARGIN_LEFT + col * TILE_SIZE
+            y = MARGIN_TOP  + row * TILE_SIZE
             _draw_badge(draw, x, y, letter, LETTER_BG, LETTER_FG, font_letter, pad=5)
 
     result = Image.alpha_composite(board, overlay).convert("RGB")
