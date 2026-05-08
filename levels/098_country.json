@@ -106,7 +106,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",

@@ -121,7 +121,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",
@@ -799,7 +799,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "water",
         "objects": [
           {
             "type": "sprite",

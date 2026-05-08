@@ -54,27 +54,26 @@ def _dominant_colour(arr: np.ndarray,
     if dark_green / total > 0.10:
         return "forest"
 
-    # Grass is solid bright-green ground: a single uniform colour, so any tile
-    # with >15% bright-green pixels is grass even if mud bleeds through edges.
-    bright_green = int(((g > 175) & (r < 60) & (b < 60)).sum())
-    if bright_green / total > 0.15:
-        return "grass"
-
-    # Water priority: >30% blue pixels → water, before the mud check.
+    # Water priority: >30% blue pixels → water.
     water_px = int(((b > 150) & (b > r * 1.5) & (b > g * 1.2)).sum())
     if water_px / total > 0.30:
         return "water"
 
-    # Sand (warm yellow) and rock (neutral gray) are checked together so that
-    # whichever dominates wins.  This handles both pure-terrain tiles and tiles
-    # where sprite edge pixels bleed into the background count (e.g. an elephant
-    # on sand has ~18% gray edges that would otherwise trigger the rock check).
-    sand_px   = int(((r > 200) & (g > 200) & (b > 100) & (b < 210)
-                     & (np.abs(r - g) < 40)).sum())
-    rock_gray = int(((np.abs(r - g) < 25) & (np.abs(g - b) < 25)
-                     & (r > 80) & (r < 220)).sum())
-    if sand_px / total > 0.20 or rock_gray / total > 0.15:
-        return "sand" if sand_px > rock_gray else "rock"
+    # Grass, sand, and rock are checked together so whichever dominates wins.
+    # Rock tiles often have bright-green grass pixels at their edges (>15%),
+    # which would cause a premature "grass" classification if checked first.
+    bright_green = int(((g > 175) & (r < 60) & (b < 60)).sum())
+    sand_px      = int(((r > 200) & (g > 200) & (b > 100) & (b < 210)
+                        & (np.abs(r - g) < 40)).sum())
+    rock_gray    = int(((np.abs(r - g) < 25) & (np.abs(g - b) < 25)
+                        & (r > 80) & (r < 220)).sum())
+    if bright_green / total > 0.15 or sand_px / total > 0.20 or rock_gray / total > 0.15:
+        best = max(bright_green, sand_px, rock_gray)
+        if best == rock_gray:
+            return "rock"
+        if best == sand_px:
+            return "sand"
+        return "grass"
 
     # Mud signature: pinkish-brown (134,81,81) — R is dominant, G≈B both ~60-100.
     mud = int(((r > 100) & (r < 200)

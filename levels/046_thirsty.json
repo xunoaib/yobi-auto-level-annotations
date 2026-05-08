@@ -31,7 +31,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
@@ -90,7 +90,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -98,7 +98,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -134,7 +134,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       }
     ],
@@ -201,7 +201,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       }
     ],
@@ -263,7 +263,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       }
     ],
@@ -335,7 +335,7 @@
         ]
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       }
     ],
@@ -455,7 +455,7 @@
         ]
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -562,7 +562,7 @@
     ],
     [
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -570,7 +570,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -636,7 +636,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -762,7 +762,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       }
     ],
@@ -808,7 +808,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {

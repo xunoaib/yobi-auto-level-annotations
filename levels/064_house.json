@@ -149,7 +149,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -350,7 +350,7 @@
         ]
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       }
     ],
@@ -464,7 +464,7 @@
         ]
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -531,7 +531,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -606,7 +606,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -678,7 +678,7 @@
         ]
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {

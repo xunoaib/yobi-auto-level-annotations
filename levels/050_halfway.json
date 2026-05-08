@@ -138,10 +138,6 @@
         ]
       },
       {
-        "terrain": "grass",
-        "objects": []
-      },
-      {
         "terrain": "rock",
         "objects": []
       },
@@ -150,7 +146,11 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
+        "objects": []
+      },
+      {
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -201,7 +201,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -264,7 +264,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -307,7 +307,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -460,7 +460,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -468,7 +468,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
@@ -633,7 +633,7 @@
         "objects": []
       },
       {
-        "terrain": "grass",
+        "terrain": "rock",
         "objects": []
       },
       {
