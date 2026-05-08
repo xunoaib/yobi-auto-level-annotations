@@ -145,7 +145,7 @@
     ],
     [
       {
-        "terrain": "water",
+        "terrain": "mud",
         "objects": [
           {
             "type": "sprite",
@@ -307,7 +307,7 @@
         "objects": []
       },
       {
-        "terrain": "water",
+        "terrain": "mud",
         "objects": [
           {
             "type": "sprite",
@@ -690,7 +690,7 @@
         "objects": []
       },
       {
-        "terrain": "water",
+        "terrain": "mud",
         "objects": [
           {
             "type": "sprite",

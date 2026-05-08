@@ -108,6 +108,16 @@ _HARDCODED_TERRAIN: dict[str, str] = {
     "alligator":  "water",
 }
 
+# Sprites that can never be on water.  When the colour classifier would
+# return "water" for one of these, water pixels are added to the exclusion
+# mask and the background is re-classified without them.
+_NEVER_ON_WATER = {
+    "stone", "cloud_demon", "arrow_demon",
+    "gazelle", "lion", "tiger", "elephant", "rhino", "zebra",
+    "bridge", "apple", "jeep",
+    "potion_water", "potion_fire", "potion_arrow", "potion_wind", "potion_time",
+}
+
 # Per-sprite-type pixel exclusion masks (functions: arr → bool mask)
 # Pixels where the mask is True are the *sprite* pixels and are excluded
 # from terrain classification so the background terrain dominates.
@@ -156,11 +166,20 @@ def background_terrain(tile_arr: np.ndarray, obj_type: str,
 
     if obj_type == "sprite":
         if sprite_template is not None:
-            # Use alpha channel of matched template as exclusion mask
             mask = sprite_template[:, :, 3] > 0
         else:
             mask = _sprite_exclude_mask(tile_arr, obj_value)
-        return _dominant_colour(tile_arr, exclude=mask)
+        terrain = _dominant_colour(tile_arr, exclude=mask)
+        # If the result is impossible (sprite can't be on water), re-classify
+        # with water pixels also excluded.
+        if terrain == "water" and obj_value in _NEVER_ON_WATER:
+            r = tile_arr[:, :, 0].astype(float)
+            g = tile_arr[:, :, 1].astype(float)
+            b = tile_arr[:, :, 2].astype(float)
+            water_mask = (b > 150) & (b > r * 1.5) & (b > g * 1.2)
+            combined = mask | water_mask if mask is not None else water_mask
+            terrain = _dominant_colour(tile_arr, exclude=combined)
+        return terrain
 
     return _dominant_colour(tile_arr)
 
