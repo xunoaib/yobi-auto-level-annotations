@@ -11,6 +11,12 @@
       "value": "bridge"
     }
   ],
+  "r03_c12": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r04_c09": [
     {
       "type": "sprite",

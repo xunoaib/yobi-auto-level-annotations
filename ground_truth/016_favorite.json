@@ -65,6 +65,12 @@
       "value": "stone"
     }
   ],
+  "r04_c02": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r04_c03": [
     {
       "type": "sprite",
@@ -99,6 +105,12 @@
     {
       "type": "letter",
       "value": "V"
+    }
+  ],
+  "r09_c09": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
     }
   ],
   "r10_c00": [

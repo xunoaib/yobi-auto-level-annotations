@@ -77,6 +77,12 @@
       "value": "bridge"
     }
   ],
+  "r07_c14": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r08_c04": [
     {
       "type": "sprite",
@@ -87,6 +93,12 @@
     {
       "type": "sprite",
       "value": "apple"
+    }
+  ],
+  "r09_c00": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
     }
   ],
   "r09_c09": [

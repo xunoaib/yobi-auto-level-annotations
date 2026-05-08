@@ -11,6 +11,12 @@
       "value": "stone"
     }
   ],
+  "r02_c13": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r03_c08": [
     {
       "type": "sprite",
@@ -75,6 +81,12 @@
     {
       "type": "sprite",
       "value": "fire_demon"
+    }
+  ],
+  "r11_c14": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
     }
   ]
 }

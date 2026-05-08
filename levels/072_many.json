@@ -315,7 +315,12 @@
       },
       {
         "terrain": "grass",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "arrow_demon"
+          }
+        ]
       },
       {
         "terrain": "pit",
@@ -719,7 +724,12 @@
       },
       {
         "terrain": "grass",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "arrow_demon"
+          }
+        ]
       },
       {
         "terrain": "grass",

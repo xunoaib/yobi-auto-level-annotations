@@ -71,6 +71,12 @@
       "value": "bridge"
     }
   ],
+  "r09_c04": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r09_c07": [
     {
       "type": "letter",

@@ -763,7 +763,12 @@
       },
       {
         "terrain": "mud",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "arrow_demon"
+          }
+        ]
       },
       {
         "terrain": "mud",

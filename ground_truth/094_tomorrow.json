@@ -94,5 +94,17 @@
       "type": "letter",
       "value": "M"
     }
+  ],
+  "r10_c05": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
+  "r10_c13": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
   ]
 }

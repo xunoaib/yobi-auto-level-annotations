@@ -41,6 +41,12 @@
       "value": "L"
     }
   ],
+  "r04_c00": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r05_c09": [
     {
       "type": "sprite",

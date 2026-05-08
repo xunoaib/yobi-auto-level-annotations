@@ -7,7 +7,12 @@
     [
       {
         "terrain": "grass",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "arrow_demon"
+          }
+        ]
       },
       {
         "terrain": "water",

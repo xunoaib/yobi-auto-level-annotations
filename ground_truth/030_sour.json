@@ -70,5 +70,11 @@
       "type": "sprite",
       "value": "bridge"
     }
+  ],
+  "r11_c13": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
   ]
 }

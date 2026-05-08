@@ -88,5 +88,11 @@
       "type": "letter",
       "value": "R"
     }
+  ],
+  "r11_c00": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
   ]
 }

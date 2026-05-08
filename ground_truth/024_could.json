@@ -23,6 +23,12 @@
       "value": "lion"
     }
   ],
+  "r03_c14": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r04_c03": [
     {
       "type": "sprite",

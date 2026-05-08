@@ -318,7 +318,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "arrow_demon"
+          }
+        ]
       },
       {
         "terrain": "grass",
@@ -686,7 +691,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "arrow_demon"
+          }
+        ]
       },
       {
         "terrain": "sand",

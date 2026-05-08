@@ -23,6 +23,12 @@
       "value": "E"
     }
   ],
+  "r04_c10": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r05_c11": [
     {
       "type": "letter",
@@ -45,6 +51,12 @@
     {
       "type": "letter",
       "value": "N"
+    }
+  ],
+  "r10_c13": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
     }
   ],
   "r11_c11": [

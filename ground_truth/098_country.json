@@ -23,6 +23,12 @@
       "value": "C"
     }
   ],
+  "r03_c00": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r04_c07": [
     {
       "type": "letter",
@@ -39,6 +45,12 @@
     {
       "type": "sprite",
       "value": "stone"
+    }
+  ],
+  "r06_c00": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
     }
   ],
   "r08_c01": [
@@ -69,6 +81,12 @@
     {
       "type": "sprite",
       "value": "tiger"
+    }
+  ],
+  "r11_c00": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
     }
   ],
   "r11_c05": [

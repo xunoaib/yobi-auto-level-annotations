@@ -83,6 +83,12 @@
       "value": "W"
     }
   ],
+  "r11_c01": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r11_c10": [
     {
       "type": "letter",

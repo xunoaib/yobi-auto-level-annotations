@@ -1,4 +1,10 @@
 {
+  "r00_c01": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r00_c08": [
     {
       "type": "sprite",

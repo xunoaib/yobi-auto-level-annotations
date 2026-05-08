@@ -5,6 +5,12 @@
       "value": "E"
     }
   ],
+  "r01_c00": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r01_c06": [
     {
       "type": "sprite",

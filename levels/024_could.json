@@ -269,7 +269,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "arrow_demon"
+          }
+        ]
       }
     ],
     [

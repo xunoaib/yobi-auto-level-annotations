@@ -17,6 +17,12 @@
       "value": "L"
     }
   ],
+  "r05_c08": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r06_c00": [
     {
       "type": "letter",

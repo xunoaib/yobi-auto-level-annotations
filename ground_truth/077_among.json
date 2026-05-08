@@ -1,4 +1,16 @@
 {
+  "r00_c04": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
+  "r00_c07": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
+  ],
   "r00_c12": [
     {
       "type": "sprite",

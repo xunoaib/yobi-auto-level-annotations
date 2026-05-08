@@ -40,5 +40,11 @@
       "type": "sprite",
       "value": "player"
     }
+  ],
+  "r11_c14": [
+    {
+      "type": "sprite",
+      "value": "arrow_demon"
+    }
   ]
 }
