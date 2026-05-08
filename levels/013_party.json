@@ -7,7 +7,12 @@
     [
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "tiger"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -255,7 +260,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "tiger"
+          }
+        ]
       },
       {
         "terrain": "grass",
@@ -385,7 +395,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "tiger"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -517,7 +532,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "tiger"
+          }
+        ]
       },
       {
         "terrain": "grass",
@@ -779,7 +799,12 @@
     [
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "tiger"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -819,7 +844,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "tiger"
+          }
+        ]
       },
       {
         "terrain": "water",

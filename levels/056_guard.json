@@ -323,7 +323,12 @@
       },
       {
         "terrain": "rock",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "elephant"
+          }
+        ]
       },
       {
         "terrain": "sand",

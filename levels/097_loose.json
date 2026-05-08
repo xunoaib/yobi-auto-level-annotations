@@ -356,7 +356,12 @@
       },
       {
         "terrain": "forest",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "alligator"
+          }
+        ]
       },
       {
         "terrain": "water",

@@ -694,7 +694,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "tiger"
+          }
+        ]
       },
       {
         "terrain": "sand",

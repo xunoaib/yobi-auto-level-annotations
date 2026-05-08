@@ -16,7 +16,12 @@
       },
       {
         "terrain": "forest",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "alligator"
+          }
+        ]
       },
       {
         "terrain": "forest",
@@ -303,7 +308,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "tiger"
+          }
+        ]
       },
       {
         "terrain": "sand",

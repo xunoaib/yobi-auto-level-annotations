@@ -74,7 +74,12 @@
     [
       {
         "terrain": "rock",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "elephant"
+          }
+        ]
       },
       {
         "terrain": "grass",
@@ -696,7 +701,12 @@
       },
       {
         "terrain": "forest",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "alligator"
+          }
+        ]
       },
       {
         "terrain": "water",

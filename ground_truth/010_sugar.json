@@ -29,16 +29,16 @@
       "value": "U"
     }
   ],
-  "r04_c12": [
-    {
-      "type": "sprite",
-      "value": "hippo"
-    }
-  ],
   "r05_c03": [
     {
       "type": "sprite",
       "value": "stone"
+    }
+  ],
+  "r05_c08": [
+    {
+      "type": "sprite",
+      "value": "token"
     }
   ],
   "r05_c09": [

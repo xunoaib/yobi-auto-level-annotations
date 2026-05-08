@@ -25,11 +25,25 @@ LABEL_JSON     = Path("terrain_labels.json")
 # ---------------------------------------------------------------------------
 # Colour-family fallback thresholds (RGB)
 # ---------------------------------------------------------------------------
-def _dominant_colour(arr: np.ndarray) -> str:
-    r = arr[:, :, 0].astype(float)
-    g = arr[:, :, 1].astype(float)
-    b = arr[:, :, 2].astype(float)
-    total = arr.shape[0] * arr.shape[1]
+def _dominant_colour(arr: np.ndarray,
+                     exclude: "np.ndarray | None" = None) -> str:
+    """Classify terrain by dominant colour.
+
+    Optional *exclude* is a boolean mask (same H×W as arr); pixels where
+    exclude=True are ignored.  Used to classify background terrain on tiles
+    that have a sprite or letter drawn on top.
+    """
+    if exclude is not None:
+        keep = ~exclude
+        r = arr[:, :, 0].astype(float)[keep]
+        g = arr[:, :, 1].astype(float)[keep]
+        b = arr[:, :, 2].astype(float)[keep]
+        total = float(keep.sum()) or 1.0
+    else:
+        r = arr[:, :, 0].astype(float)
+        g = arr[:, :, 1].astype(float)
+        b = arr[:, :, 2].astype(float)
+        total = float(arr.shape[0] * arr.shape[1])
 
     # Forest and rock are solid objects whose pixels take priority over any
     # underlying terrain that bleeds through their sprite edges.
@@ -81,6 +95,69 @@ def _dominant_colour(arr: np.ndarray) -> str:
         "embers": int(((r > 180) & (g > 100) & (g < 200) & (b < 80)).sum()),
     }
     return max(votes, key=lambda k: votes[k])
+
+
+# ---------------------------------------------------------------------------
+# Background terrain inference for tiles that carry an object
+# ---------------------------------------------------------------------------
+
+# Letter box position within a 64×64 tile (x1, y1, x2, y2)
+_LETTER_BOX = (16, 16, 48, 48)
+
+# Sprites whose underlying terrain is always the same
+_HARDCODED_TERRAIN: dict[str, str] = {
+    "player": "water",
+    "hippo":  "water",
+}
+
+# Per-sprite-type pixel exclusion masks (functions: arr → bool mask)
+# Pixels where the mask is True are the *sprite* pixels and are excluded
+# from terrain classification so the background terrain dominates.
+def _sprite_exclude_mask(arr: np.ndarray, sprite_type: str) -> "np.ndarray | None":
+    r = arr[:, :, 0].astype(float)
+    g = arr[:, :, 1].astype(float)
+    b = arr[:, :, 2].astype(float)
+    if sprite_type == "rhino" or sprite_type == "stone":
+        # Gray body pixels
+        return (np.abs(r - g) < 25) & (np.abs(g - b) < 25) & (r > 80) & (r < 220)
+    if sprite_type == "fire_demon":
+        return (r > 200) & (g < 60) & (b < 60)
+    if sprite_type == "cloud_demon":
+        return (b > 120) & (b > r) & (b > g) & (r > 60) & (g > 80) & (r < 170)
+    if sprite_type == "zebra":
+        return ((r < 60) & (g < 60) & (b < 60)) | \
+               ((r > 220) & (g > 220) & (b > 200))
+    if sprite_type == "apple":
+        return ((r > 160) & (g < 60) & (b < 100)) | \
+               ((g > 100) & (g < 220) & (r < 80) & (b < 80))
+    if sprite_type == "bridge":
+        return (r > 130) & (r < 220) & (g > 30) & (g < 145) & (b < 30) & (r > g * 1.4)
+    return None
+
+
+def background_terrain(tile_arr: np.ndarray, obj_type: str,
+                       obj_value: str) -> str:
+    """Infer the terrain type underneath a sprite or letter object.
+
+    Uses the object's pixel signature as an exclusion mask so only
+    background pixels contribute to the terrain classification.
+    """
+    # Hardcoded for sprites that always occupy a fixed terrain type
+    if obj_type == "sprite" and obj_value in _HARDCODED_TERRAIN:
+        return _HARDCODED_TERRAIN[obj_value]
+
+    if obj_type == "letter":
+        # Exclude the fixed letter-box region
+        x1, y1, x2, y2 = _LETTER_BOX
+        mask = np.zeros(tile_arr.shape[:2], dtype=bool)
+        mask[y1:y2, x1:x2] = True
+        return _dominant_colour(tile_arr, exclude=mask)
+
+    if obj_type == "sprite":
+        mask = _sprite_exclude_mask(tile_arr, obj_value)
+        return _dominant_colour(tile_arr, exclude=mask)
+
+    return _dominant_colour(tile_arr)
 
 
 # ---------------------------------------------------------------------------

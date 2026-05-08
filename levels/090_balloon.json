@@ -108,7 +108,12 @@
       },
       {
         "terrain": "forest",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "alligator"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -183,7 +188,12 @@
       },
       {
         "terrain": "rock",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "elephant"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -379,7 +389,12 @@
       },
       {
         "terrain": "forest",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "alligator"
+          }
+        ]
       },
       {
         "terrain": "rock",
