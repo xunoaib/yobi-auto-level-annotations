@@ -41,6 +41,12 @@
       "value": "E"
     }
   ],
+  "r07_c06": [
+    {
+      "type": "sprite",
+      "value": "potion_fire"
+    }
+  ],
   "r07_c08": [
     {
       "type": "sprite",

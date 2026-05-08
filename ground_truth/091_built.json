@@ -1,4 +1,10 @@
 {
+  "r00_c01": [
+    {
+      "type": "sprite",
+      "value": "potion_wind"
+    }
+  ],
   "r00_c03": [
     {
       "type": "letter",
@@ -17,10 +23,22 @@
       "value": "alligator"
     }
   ],
+  "r01_c00": [
+    {
+      "type": "sprite",
+      "value": "potion_fire"
+    }
+  ],
   "r01_c14": [
     {
       "type": "sprite",
       "value": "bridge"
+    }
+  ],
+  "r02_c00": [
+    {
+      "type": "sprite",
+      "value": "potion_arrow"
     }
   ],
   "r02_c05": [
@@ -51,6 +69,12 @@
     {
       "type": "sprite",
       "value": "stone"
+    }
+  ],
+  "r05_c11": [
+    {
+      "type": "sprite",
+      "value": "potion_time"
     }
   ],
   "r07_c01": [

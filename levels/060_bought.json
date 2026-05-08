@@ -595,7 +595,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "potion_wind"
+          }
+        ]
       },
       {
         "terrain": "sand",

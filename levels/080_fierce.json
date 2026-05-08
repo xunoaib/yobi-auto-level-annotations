@@ -498,7 +498,12 @@
       },
       {
         "terrain": "mud",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "potion_water"
+          }
+        ]
       },
       {
         "terrain": "mud",

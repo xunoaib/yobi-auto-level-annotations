@@ -82,5 +82,11 @@
       "type": "sprite",
       "value": "tiger"
     }
+  ],
+  "r11_c05": [
+    {
+      "type": "sprite",
+      "value": "potion_water"
+    }
   ]
 }

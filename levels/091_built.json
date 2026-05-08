@@ -11,7 +11,12 @@
       },
       {
         "terrain": "grass",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "potion_wind"
+          }
+        ]
       },
       {
         "terrain": "grass",
@@ -84,7 +89,12 @@
     [
       {
         "terrain": "grass",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "potion_fire"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -151,7 +161,12 @@
     [
       {
         "terrain": "grass",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "potion_arrow"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -406,7 +421,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "potion_time"
+          }
+        ]
       },
       {
         "terrain": "sand",

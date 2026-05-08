@@ -71,6 +71,12 @@
       "value": "T"
     }
   ],
+  "r08_c08": [
+    {
+      "type": "sprite",
+      "value": "potion_wind"
+    }
+  ],
   "r08_c12": [
     {
       "type": "sprite",

@@ -464,7 +464,12 @@
       },
       {
         "terrain": "grass",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "potion_fire"
+          }
+        ]
       },
       {
         "terrain": "sand",

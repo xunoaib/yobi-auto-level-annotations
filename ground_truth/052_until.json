@@ -64,5 +64,11 @@
       "type": "letter",
       "value": "T"
     }
+  ],
+  "r10_c11": [
+    {
+      "type": "sprite",
+      "value": "potion_fire"
+    }
   ]
 }

@@ -29,6 +29,12 @@
       "value": "H"
     }
   ],
+  "r03_c10": [
+    {
+      "type": "sprite",
+      "value": "potion_fire"
+    }
+  ],
   "r05_c02": [
     {
       "type": "sprite",
@@ -59,6 +65,12 @@
       "value": "fire_demon"
     }
   ],
+  "r06_c10": [
+    {
+      "type": "sprite",
+      "value": "potion_arrow"
+    }
+  ],
   "r07_c13": [
     {
       "type": "sprite",
@@ -75,6 +87,12 @@
     {
       "type": "sprite",
       "value": "arrow_demon"
+    }
+  ],
+  "r09_c10": [
+    {
+      "type": "sprite",
+      "value": "potion_wind"
     }
   ],
   "r10_c02": [

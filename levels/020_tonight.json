@@ -779,7 +779,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "potion_water"
+          }
+        ]
       },
       {
         "terrain": "sand",

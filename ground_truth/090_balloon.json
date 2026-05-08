@@ -95,6 +95,12 @@
       "value": "L"
     }
   ],
+  "r09_c09": [
+    {
+      "type": "sprite",
+      "value": "potion_time"
+    }
+  ],
   "r10_c13": [
     {
       "type": "sprite",

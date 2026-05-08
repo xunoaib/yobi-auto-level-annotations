@@ -56,7 +56,11 @@ SPRITE_COLORS: dict[str, tuple] = {
     "bridge":       (140,  80,  20, 210),   # brown
     "stone":        (150, 150, 150, 210),   # grey
     "token":        (220, 190,   0, 210),   # gold
-    "potion":       (180,  30, 180, 210),   # magenta
+    "potion_water": ( 30, 100, 220, 210),   # blue
+    "potion_fire":  (220,  80,   0, 210),   # orange
+    "potion_arrow": ( 80, 160,  40, 210),   # green
+    "potion_wind":  ( 80, 200, 200, 210),   # cyan
+    "potion_time":  (120,  30, 180, 210),   # purple
     # Vehicles
     "jeep":         ( 30, 160,  30, 210),   # green
 }

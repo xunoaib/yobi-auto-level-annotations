@@ -26,7 +26,8 @@ MATCH_THRESHOLD = 0.65   # fraction of sprite pixels that must match exactly
 
 # These sprites are symmetric / non-animated and only need to be checked
 # at rotation=0.  Everything else (animals) gets all four rotations.
-NO_ROTATION = {"player", "cloud_demon", "fire_demon", "bridge", "apple"}
+NO_ROTATION = {"player", "cloud_demon", "fire_demon", "bridge", "apple",
+               "potion_water", "potion_fire", "potion_arrow", "potion_wind", "potion_time"}
 
 
 def load_templates(sprites_dir: Path = SPRITES_DIR) -> dict[str, list[np.ndarray]]:

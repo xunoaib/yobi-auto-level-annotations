@@ -53,6 +53,12 @@
       "value": "A"
     }
   ],
+  "r06_c10": [
+    {
+      "type": "sprite",
+      "value": "potion_fire"
+    }
+  ],
   "r07_c13": [
     {
       "type": "sprite",

@@ -29,6 +29,12 @@
       "value": "E"
     }
   ],
+  "r07_c08": [
+    {
+      "type": "sprite",
+      "value": "potion_water"
+    }
+  ],
   "r08_c01": [
     {
       "type": "sprite",

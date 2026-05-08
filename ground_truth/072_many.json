@@ -23,6 +23,12 @@
       "value": "E"
     }
   ],
+  "r04_c08": [
+    {
+      "type": "sprite",
+      "value": "potion_time"
+    }
+  ],
   "r04_c10": [
     {
       "type": "sprite",

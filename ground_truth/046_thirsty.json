@@ -65,6 +65,12 @@
       "value": "E"
     }
   ],
+  "r07_c12": [
+    {
+      "type": "sprite",
+      "value": "potion_water"
+    }
+  ],
   "r09_c11": [
     {
       "type": "letter",

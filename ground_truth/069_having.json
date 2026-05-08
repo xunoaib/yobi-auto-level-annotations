@@ -17,6 +17,12 @@
       "value": "apple"
     }
   ],
+  "r03_c14": [
+    {
+      "type": "sprite",
+      "value": "potion_time"
+    }
+  ],
   "r04_c12": [
     {
       "type": "letter",

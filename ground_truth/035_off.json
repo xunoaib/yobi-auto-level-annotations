@@ -41,6 +41,12 @@
       "value": "player"
     }
   ],
+  "r10_c06": [
+    {
+      "type": "sprite",
+      "value": "potion_arrow"
+    }
+  ],
   "r11_c14": [
     {
       "type": "sprite",
