@@ -170,14 +170,19 @@ def background_terrain(tile_arr: np.ndarray, obj_type: str,
         else:
             mask = _sprite_exclude_mask(tile_arr, obj_value)
         terrain = _dominant_colour(tile_arr, exclude=mask)
-        # If the result is impossible (sprite can't be on water), re-classify
-        # with water pixels also excluded.
+        # Re-classify if the result is an impossible terrain for this sprite.
+        r_ = tile_arr[:, :, 0].astype(float)
+        g_ = tile_arr[:, :, 1].astype(float)
+        b_ = tile_arr[:, :, 2].astype(float)
         if terrain == "water" and obj_value in _NEVER_ON_WATER:
-            r = tile_arr[:, :, 0].astype(float)
-            g = tile_arr[:, :, 1].astype(float)
-            b = tile_arr[:, :, 2].astype(float)
-            water_mask = (b > 150) & (b > r * 1.5) & (b > g * 1.2)
-            combined = mask | water_mask if mask is not None else water_mask
+            water_mask = (b_ > 150) & (b_ > r_ * 1.5) & (b_ > g_ * 1.2)
+            combined = (mask | water_mask) if mask is not None else water_mask
+            terrain = _dominant_colour(tile_arr, exclude=combined)
+        if terrain == "forest" and obj_value in _NEVER_ON_WATER:
+            # jeep body uses darker greens identical to the forest-trigger range;
+            # exclude those to let the bright-green grass pixels dominate.
+            dark_green_mask = (g_ > 50) & (g_ < 175) & (r_ < 60) & (b_ < 60)
+            combined = (mask | dark_green_mask) if mask is not None else dark_green_mask
             terrain = _dominant_colour(tile_arr, exclude=combined)
         return terrain
 

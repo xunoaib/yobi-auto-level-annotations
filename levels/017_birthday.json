@@ -322,7 +322,7 @@
         "objects": []
       },
       {
-        "terrain": "forest",
+        "terrain": "grass",
         "objects": [
           {
             "type": "sprite",

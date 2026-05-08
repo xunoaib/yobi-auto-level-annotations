@@ -573,7 +573,7 @@
         "objects": []
       },
       {
-        "terrain": "forest",
+        "terrain": "sand",
         "objects": [
           {
             "type": "sprite",
