@@ -54,26 +54,25 @@ def _dominant_colour(arr: np.ndarray,
     if dark_green / total > 0.10:
         return "forest"
 
-    # Water priority: >30% blue pixels → water.
-    water_px = int(((b > 150) & (b > r * 1.5) & (b > g * 1.2)).sum())
-    if water_px / total > 0.30:
-        return "water"
-
-    # Grass, sand, and rock are checked together so whichever dominates wins.
-    # Rock tiles often have bright-green grass pixels at their edges (>15%),
-    # which would cause a premature "grass" classification if checked first.
+    # Water, grass, sand, and rock are all checked together so whichever
+    # dominates wins.  Checking water in isolation first caused rock/water
+    # border tiles (55% rock, 33% water) to be misclassified as water.
+    water_px     = int(((b > 150) & (b > r * 1.5) & (b > g * 1.2)).sum())
     bright_green = int(((g > 175) & (r < 60) & (b < 60)).sum())
     sand_px      = int(((r > 200) & (g > 200) & (b > 100) & (b < 210)
                         & (np.abs(r - g) < 40)).sum())
     rock_gray    = int(((np.abs(r - g) < 25) & (np.abs(g - b) < 25)
                         & (r > 80) & (r < 220)).sum())
-    if bright_green / total > 0.15 or sand_px / total > 0.20 or rock_gray / total > 0.15:
-        best = max(bright_green, sand_px, rock_gray)
+    if (water_px / total > 0.30 or bright_green / total > 0.15
+            or sand_px / total > 0.20 or rock_gray / total > 0.15):
+        best = max(water_px, bright_green, sand_px, rock_gray)
         if best == rock_gray:
             return "rock"
         if best == sand_px:
             return "sand"
-        return "grass"
+        if best == bright_green:
+            return "grass"
+        return "water"
 
     # Mud signature: pinkish-brown (134,81,81) — R is dominant, G≈B both ~60-100.
     mud = int(((r > 100) & (r < 200)
