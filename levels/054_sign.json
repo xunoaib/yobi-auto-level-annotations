@@ -696,7 +696,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "lion"
+          }
+        ]
       },
       {
         "terrain": "sand",
@@ -749,7 +754,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "lion"
+          }
+        ]
       },
       {
         "terrain": "forest",

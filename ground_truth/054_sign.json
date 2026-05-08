@@ -77,10 +77,22 @@
       "value": "bridge"
     }
   ],
+  "r10_c01": [
+    {
+      "type": "sprite",
+      "value": "lion"
+    }
+  ],
   "r10_c06": [
     {
       "type": "sprite",
       "value": "player"
+    }
+  ],
+  "r10_c13": [
+    {
+      "type": "sprite",
+      "value": "lion"
     }
   ],
   "r11_c10": [

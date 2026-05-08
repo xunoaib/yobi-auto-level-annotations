@@ -59,6 +59,12 @@
       "value": "elephant"
     }
   ],
+  "r05_c01": [
+    {
+      "type": "sprite",
+      "value": "lion"
+    }
+  ],
   "r06_c12": [
     {
       "type": "sprite",

@@ -29,15 +29,24 @@ MATCH_THRESHOLD = 0.65   # fraction of sprite pixels that must match exactly
 NO_ROTATION = {"player", "cloud_demon", "fire_demon", "bridge", "apple"}
 
 
-def load_templates(sprites_dir: Path = SPRITES_DIR) -> dict[str, np.ndarray]:
-    """Return {sprite_name: RGBA uint8 array} for every PNG in sprites/."""
-    templates: dict[str, np.ndarray] = {}
+def load_templates(sprites_dir: Path = SPRITES_DIR) -> dict[str, list[np.ndarray]]:
+    """Return {sprite_name: [RGBA arrays]} for every PNG in sprites/.
+
+    Multiple files sharing the same base name (e.g. lion.png, lion_2.png)
+    are grouped under the same sprite so all variants are tried during
+    detection.  The base name is the filename stem stripped of any trailing
+    underscore-digit suffix (_2, _3, …).
+    """
+    import re
+    templates: dict[str, list[np.ndarray]] = {}
     for p in sorted(sprites_dir.glob("*.png")):
         if p.stem == "sprite_sheet":
             continue
         arr = np.array(Image.open(p).convert("RGBA"), dtype=np.uint8)
-        if arr.shape == (64, 64, 4):
-            templates[p.stem] = arr
+        if arr.shape != (64, 64, 4):
+            continue
+        base = re.sub(r"_\d+$", "", p.stem)
+        templates.setdefault(base, []).append(arr)
     return templates
 
 
@@ -54,27 +63,29 @@ def _match_score(tile: np.ndarray, template: np.ndarray) -> float:
 
 def detect_sprite_template(
     tile_arr: np.ndarray,
-    templates: dict[str, np.ndarray],
+    templates: "dict[str, list[np.ndarray]]",
     threshold: float = MATCH_THRESHOLD,
 ) -> "dict | None":
     """Return the best-matching sprite dict or None.
 
     tile_arr must be (64, 64, 3) uint8.
     Tries all four 90° CCW rotations for sprites that support it.
+    Multiple template variants per sprite name are all tried.
     """
     best_name: str | None = None
     best_conf: float = 0.0
     best_template: "np.ndarray | None" = None
 
-    for name, template in templates.items():
+    for name, variant_list in templates.items():
         rotations = [0] if name in NO_ROTATION else [0, 1, 2, 3]
-        for k in rotations:
-            rotated = np.rot90(template, k=k, axes=(0, 1))
-            score = _match_score(tile_arr, rotated)
-            if score > best_conf:
-                best_conf = score
-                best_name = name
-                best_template = rotated
+        for template in variant_list:
+            for k in rotations:
+                rotated = np.rot90(template, k=k, axes=(0, 1))
+                score = _match_score(tile_arr, rotated)
+                if score > best_conf:
+                    best_conf = score
+                    best_name = name
+                    best_template = rotated
 
     if best_conf >= threshold and best_name is not None:
         return {

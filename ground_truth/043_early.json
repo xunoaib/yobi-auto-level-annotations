@@ -88,5 +88,11 @@
       "type": "letter",
       "value": "I"
     }
+  ],
+  "r11_c11": [
+    {
+      "type": "sprite",
+      "value": "lion"
+    }
   ]
 }

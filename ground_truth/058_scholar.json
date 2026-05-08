@@ -53,6 +53,12 @@
       "value": "K"
     }
   ],
+  "r04_c08": [
+    {
+      "type": "sprite",
+      "value": "lion"
+    }
+  ],
   "r07_c01": [
     {
       "type": "sprite",

@@ -95,6 +95,12 @@
       "value": "tiger"
     }
   ],
+  "r07_c07": [
+    {
+      "type": "sprite",
+      "value": "lion"
+    }
+  ],
   "r07_c09": [
     {
       "type": "letter",
@@ -111,6 +117,12 @@
     {
       "type": "sprite",
       "value": "apple"
+    }
+  ],
+  "r09_c02": [
+    {
+      "type": "sprite",
+      "value": "lion"
     }
   ],
   "r09_c14": [

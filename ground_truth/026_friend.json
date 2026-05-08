@@ -59,6 +59,12 @@
       "value": "rhino"
     }
   ],
+  "r08_c12": [
+    {
+      "type": "sprite",
+      "value": "lion"
+    }
+  ],
   "r10_c10": [
     {
       "type": "sprite",

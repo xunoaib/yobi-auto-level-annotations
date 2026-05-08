@@ -23,6 +23,12 @@
       "value": "T"
     }
   ],
+  "r03_c10": [
+    {
+      "type": "sprite",
+      "value": "lion"
+    }
+  ],
   "r03_c13": [
     {
       "type": "sprite",

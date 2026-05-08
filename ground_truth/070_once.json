@@ -83,6 +83,12 @@
       "value": "bridge"
     }
   ],
+  "r11_c09": [
+    {
+      "type": "sprite",
+      "value": "lion"
+    }
+  ],
   "r11_c14": [
     {
       "type": "sprite",

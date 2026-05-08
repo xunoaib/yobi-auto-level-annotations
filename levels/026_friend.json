@@ -601,7 +601,12 @@
       },
       {
         "terrain": "sand",
-        "objects": []
+        "objects": [
+          {
+            "type": "sprite",
+            "value": "lion"
+          }
+        ]
       },
       {
         "terrain": "water",

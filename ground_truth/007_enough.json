@@ -65,6 +65,12 @@
       "value": "N"
     }
   ],
+  "r08_c11": [
+    {
+      "type": "sprite",
+      "value": "lion"
+    }
+  ],
   "r11_c03": [
     {
       "type": "letter",
