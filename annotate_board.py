@@ -94,12 +94,15 @@ def _load_font(size: int) -> ImageFont.ImageFont:
 
 def _draw_badge(draw: ImageDraw.ImageDraw, x: int, y: int,
                 text: str, bg: tuple, fg: tuple, font: ImageFont.ImageFont,
-                pad: int = 4, anchor_bottom: bool = False) -> None:
+                pad: int = 4, anchor_bottom: bool = False,
+                anchor_top: bool = False) -> None:
     bbox = font.getbbox(text)
     tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
     tx = x + (TILE_SIZE - tw) // 2 - bbox[0]
     if anchor_bottom:
         ty = y + TILE_SIZE - th - pad * 2 - bbox[1]
+    elif anchor_top:
+        ty = y + pad - bbox[1]
     else:
         ty = y + (TILE_SIZE - th) // 2 - bbox[1]
     bx0, by0 = tx - pad, ty - pad
@@ -198,7 +201,7 @@ def annotate(board_path: Path, tile_dir: Path,
             row, col = int(stem[1:3]), int(stem[5:7])
             x = MARGIN_LEFT + col * TILE_SIZE
             y = MARGIN_TOP  + row * TILE_SIZE
-            _draw_badge(draw, x, y, letter, LETTER_BG, LETTER_FG, font_letter, pad=5)
+            _draw_badge(draw, x, y, letter, LETTER_BG, LETTER_FG, font_letter, pad=5, anchor_bottom=True)
 
     result = Image.alpha_composite(board, overlay).convert("RGB")
     out_path.parent.mkdir(parents=True, exist_ok=True)
