@@ -223,6 +223,39 @@ def _level_summary(level_data: dict) -> str:
             f"sprites=[{sprite_str}]")
 
 
+import os
+from concurrent.futures import ProcessPoolExecutor, as_completed as _as_completed
+
+_ann_letter_refs: dict = {}
+_ann_terrain_lookup: dict = {}
+_ann_show: str = "both"
+_ann_tiles_root: "Path | None" = None
+_ann_outdir: "Path | None" = None
+
+
+def _ann_init(refs_path: str, tiles_root: str, outdir: str, show: str) -> None:
+    global _ann_letter_refs, _ann_terrain_lookup, _ann_show, _ann_tiles_root, _ann_outdir
+    with open(refs_path) as f:
+        _ann_letter_refs = json.load(f)
+    _ann_terrain_lookup = build_terrain_lookup()
+    _ann_show      = show
+    _ann_tiles_root = Path(tiles_root)
+    _ann_outdir    = Path(outdir)
+
+
+def _ann_one(board_path_str: str) -> str:
+    board_path = Path(board_path_str)
+    tile_dir   = _ann_tiles_root / board_path.stem
+    if not tile_dir.exists():
+        return f"SKIP {board_path.name}: no tile dir {tile_dir}"
+    out_path   = _ann_outdir / board_path.name
+    level_json = Path("levels") / f"{tile_dir.name}.json"
+    level_data = json.loads(level_json.read_text()) if level_json.exists() else None
+    summary    = _level_summary(level_data)
+    annotate(board_path, tile_dir, _ann_letter_refs, _ann_terrain_lookup, _ann_show, out_path)
+    return f"{board_path.stem}  {summary}\n  -> {out_path}"
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Annotate cropped Yobi board images")
     parser.add_argument("boards", nargs="+", type=Path)
@@ -231,26 +264,40 @@ def main() -> None:
     parser.add_argument("--refs", type=Path, default=DEFAULT_REFS)
     parser.add_argument("--show", choices=["letters", "terrain", "both"],
                         default="both", help="What to overlay (default: both)")
+    parser.add_argument("-j", "--jobs", type=int, default=os.cpu_count(),
+                        help="Parallel worker processes (default: cpu count)")
     args = parser.parse_args()
 
-    with open(args.refs) as f:
-        letter_refs = json.load(f)
-    terrain_lookup = build_terrain_lookup()
+    boards = [b for b in args.boards if (args.tiles / b.stem).exists()]
 
-    for board_path in args.boards:
-        tile_dir = args.tiles / board_path.stem
-        if not tile_dir.exists():
-            print(f"SKIP {board_path.name}: no tile dir {tile_dir}")
-            continue
-        out_path = args.outdir / board_path.name
+    if len(boards) == 1 or args.jobs == 1:
+        with open(args.refs) as f:
+            letter_refs = json.load(f)
+        terrain_lookup = build_terrain_lookup()
+        for board_path in boards:
+            tile_dir   = args.tiles / board_path.stem
+            out_path   = args.outdir / board_path.name
+            level_json = Path("levels") / f"{tile_dir.name}.json"
+            level_data = json.loads(level_json.read_text()) if level_json.exists() else None
+            summary    = _level_summary(level_data)
+            annotate(board_path, tile_dir, letter_refs, terrain_lookup, args.show, out_path)
+            print(f"{board_path.stem}  {summary}")
+            print(f"  -> {out_path}")
+        return
 
-        level_json = Path("levels") / f"{tile_dir.name}.json"
-        level_data = json.loads(level_json.read_text()) if level_json.exists() else None
-        summary = _level_summary(level_data)
+    results: dict[str, str] = {}
+    with ProcessPoolExecutor(
+        max_workers=args.jobs,
+        initializer=_ann_init,
+        initargs=(str(args.refs), str(args.tiles), str(args.outdir), args.show),
+    ) as pool:
+        futures = {pool.submit(_ann_one, str(b)): b.stem for b in boards}
+        for fut in _as_completed(futures):
+            stem = futures[fut]
+            results[stem] = fut.result()
 
-        annotate(board_path, tile_dir, letter_refs, terrain_lookup, args.show, out_path)
-        print(f"{board_path.stem}  {summary}")
-        print(f"  -> {out_path}")
+    for stem in sorted(results):
+        print(results[stem])
 
 
 if __name__ == "__main__":

@@ -122,6 +122,42 @@ def parse_level(tile_dir: Path, terrain_lookup: dict, letter_refs: dict,
     }
 
 
+import os
+from concurrent.futures import ProcessPoolExecutor, as_completed
+
+# Module-level shared state, populated by each worker process on startup
+_terrain_lookup: dict = {}
+_letter_refs: dict = {}
+_sprite_templates: "dict | None" = None
+
+
+def _worker_init(refs_path: str) -> None:
+    global _terrain_lookup, _letter_refs, _sprite_templates
+    _terrain_lookup   = build_terrain_lookup()
+    _sprite_templates = load_templates()
+    with open(refs_path) as f:
+        _letter_refs = json.load(f)
+
+
+def _parse_and_write(args: tuple) -> str:
+    tile_dir_str, outdir_str = args
+    tile_dir = Path(tile_dir_str)
+    level = parse_level(tile_dir, _terrain_lookup, _letter_refs, _sprite_templates)
+    if outdir_str:
+        outdir = Path(outdir_str)
+        outdir.mkdir(parents=True, exist_ok=True)
+        out = outdir / f"{tile_dir.name}.json"
+        with open(out, "w") as f:
+            json.dump(level, f, indent=2)
+    letter_tiles = [
+        f"r{r}c{c}={obj['value']}"
+        for r, row in enumerate(level["grid"])
+        for c, tile in enumerate(row)
+        for obj in tile["objects"] if obj["type"] == "letter"
+    ]
+    return f"{tile_dir.name}  word={level['word']}  letters={letter_tiles}"
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Parse Yobi level tiles into JSON")
     parser.add_argument("dirs", nargs="+", type=Path, help="Tile level directories")
@@ -129,33 +165,54 @@ def main() -> None:
                         help="Write one JSON file per level to this directory "
                              "(default: print to stdout)")
     parser.add_argument("--refs", type=Path, default=DEFAULT_REFS)
+    parser.add_argument("-j", "--jobs", type=int, default=os.cpu_count(),
+                        help="Parallel worker processes (default: cpu count)")
     args = parser.parse_args()
 
-    terrain_lookup = build_terrain_lookup()
-    sprite_templates = load_templates()
-    with open(args.refs) as f:
-        letter_refs = json.load(f)
+    dirs = [d for d in args.dir if d.is_dir()] if False else \
+           [d for d in args.dirs if Path(d).is_dir()]
 
-    for tile_dir in args.dirs:
-        if not tile_dir.is_dir():
-            continue
-        level = parse_level(tile_dir, terrain_lookup, letter_refs, sprite_templates)
-
-        if args.outdir:
-            args.outdir.mkdir(parents=True, exist_ok=True)
-            out = args.outdir / f"{tile_dir.name}.json"
-            with open(out, "w") as f:
-                json.dump(level, f, indent=2)
-            # Print a compact summary
+    if len(dirs) == 1 or args.jobs == 1:
+        # Single-level or forced serial: skip process overhead
+        terrain_lookup   = build_terrain_lookup()
+        sprite_templates = load_templates()
+        with open(args.refs) as f:
+            letter_refs = json.load(f)
+        for tile_dir in dirs:
+            level = parse_level(tile_dir, terrain_lookup, letter_refs, sprite_templates)
+            if args.outdir:
+                args.outdir.mkdir(parents=True, exist_ok=True)
+                out = args.outdir / f"{tile_dir.name}.json"
+                with open(out, "w") as f:
+                    json.dump(level, f, indent=2)
             letter_tiles = [
                 f"r{r}c{c}={obj['value']}"
                 for r, row in enumerate(level["grid"])
                 for c, tile in enumerate(row)
                 for obj in tile["objects"] if obj["type"] == "letter"
             ]
-            print(f"{tile_dir.name}  word={level['word']}  letters={letter_tiles}")
-        else:
-            print(json.dumps(level, indent=2))
+            if args.outdir:
+                print(f"{tile_dir.name}  word={level['word']}  letters={letter_tiles}")
+            else:
+                print(json.dumps(level, indent=2))
+        return
+
+    work = [(str(d), str(args.outdir) if args.outdir else "") for d in dirs]
+    results: dict[str, str] = {}
+
+    with ProcessPoolExecutor(
+        max_workers=args.jobs,
+        initializer=_worker_init,
+        initargs=(str(args.refs),),
+    ) as pool:
+        futures = {pool.submit(_parse_and_write, w): w[0] for w in work}
+        for fut in as_completed(futures):
+            summary = fut.result()
+            name = Path(futures[fut]).name
+            results[name] = summary
+
+    for name in sorted(results):
+        print(results[name])
 
 
 if __name__ == "__main__":

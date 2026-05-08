@@ -68,6 +68,34 @@ def diff(detected: dict, truth: dict) -> tuple[list, list, list]:
     return missing, extra, ok
 
 
+import os
+from concurrent.futures import ProcessPoolExecutor, as_completed as _as_completed
+
+_val_tiles: "Path | None" = None
+_val_terrain_lookup: dict = {}
+_val_letter_refs: dict = {}
+_val_sprite_templates: "dict | None" = None
+
+
+def _val_init(tiles_root: str, refs_path: str) -> None:
+    global _val_tiles, _val_terrain_lookup, _val_letter_refs, _val_sprite_templates
+    _val_tiles            = Path(tiles_root)
+    _val_terrain_lookup   = build_terrain_lookup()
+    _val_sprite_templates = load_templates()
+    with open(refs_path) as f:
+        _val_letter_refs = json.load(f)
+
+
+def _val_one(gt_path_str: str) -> tuple:
+    gt_file    = Path(gt_path_str)
+    level_name = gt_file.stem
+    truth      = load_ground_truth(gt_file)
+    detected   = detect_objects(level_name, _val_tiles, _val_terrain_lookup,
+                                _val_letter_refs, _val_sprite_templates)
+    missing, extra, ok = diff(detected, truth)
+    return level_name, missing, extra, ok
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate detections against ground truth")
     parser.add_argument("levels", nargs="*",
@@ -79,35 +107,37 @@ def main() -> None:
     parser.add_argument("--refs", type=Path, default=DEFAULT_REFS)
     parser.add_argument("--summary", action="store_true",
                         help="Print one summary line per level only")
+    parser.add_argument("-j", "--jobs", type=int, default=os.cpu_count(),
+                        help="Parallel worker processes (default: cpu count)")
     args = parser.parse_args()
-
-    with open(args.refs) as f:
-        letter_refs = json.load(f)
-    terrain_lookup = build_terrain_lookup()
-    sprite_templates = load_templates()
 
     if args.levels:
         gt_files = [args.gt / f"{stem}.json" for stem in args.levels]
     else:
         gt_files = sorted(args.gt.glob("*.json"))
 
+    gt_files = [f for f in gt_files if f.exists()]
     if not gt_files:
         print(f"No ground truth files found in {args.gt}/")
         sys.exit(0)
 
+    level_results: dict[str, tuple] = {}
+
+    with ProcessPoolExecutor(
+        max_workers=args.jobs,
+        initializer=_val_init,
+        initargs=(str(args.tiles), str(args.refs)),
+    ) as pool:
+        futures = {pool.submit(_val_one, str(f)): f.stem for f in gt_files}
+        for fut in _as_completed(futures):
+            level_name, missing, extra, ok = fut.result()
+            level_results[level_name] = (missing, extra, ok)
+
     total_missing = total_extra = total_ok = 0
     failed_levels: list[str] = []
 
-    for gt_file in gt_files:
-        if not gt_file.exists():
-            print(f"SKIP {gt_file.name}: ground truth file not found")
-            continue
-
-        level_name = gt_file.stem
-        truth    = load_ground_truth(gt_file)
-        detected = detect_objects(level_name, args.tiles, terrain_lookup, letter_refs, sprite_templates)
-        missing, extra, ok = diff(detected, truth)
-
+    for level_name in sorted(level_results):
+        missing, extra, ok = level_results[level_name]
         total_missing += len(missing)
         total_extra   += len(extra)
         total_ok      += len(ok)
@@ -125,10 +155,7 @@ def main() -> None:
                 for stem, objs in extra:
                     print(f"  EXTRA    {stem}: {objs}")
         else:
-            if args.summary:
-                print(f"ok    {level_name}  ({len(ok)} object tiles)")
-            else:
-                print(f"ok    {level_name}  ({len(ok)} object tiles)")
+            print(f"ok    {level_name}  ({len(ok)} object tiles)")
 
     print(f"\n{'='*60}")
     print(f"Levels checked : {len(gt_files)}")
